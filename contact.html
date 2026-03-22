@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .contact-intro p {
+    font-size: .94rem; color: var(--body-c);
+    line-height: 1.82; margin-bottom: .9rem;
+  }
+  .contact-intro p strong { color: var(--ink); font-weight: 600; }
+
+  .link-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .cl {
+    display: flex; align-items: center; gap: 1.1rem;
+    padding: .95rem 1.3rem;
+    background: var(--surface);
+    text-decoration: none; color: inherit;
+    border-bottom: 1px solid var(--rule);
+    transition: background .17s, color .17s;
+  }
+  .cl:last-child { border-bottom: none; }
+  .cl:hover { background: var(--accent-lt); }
+  .cl:hover .cl-val { color: var(--accent); }
+  .cl-abbr {
+    width: 32px; height: 32px; flex-shrink: 0;
+    background: var(--bg); border: 1px solid var(--rule-dark);
+    border-radius: 5px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--ff-sans); font-size: .6rem; font-weight: 800;
+    color: var(--muted); letter-spacing: .05em;
+  }
+  .cl-inner { display: flex; flex-direction: column; gap: .05rem; }
+  .cl-label { font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .cl-val { font-size: .84rem; color: var(--body-c); transition: color .17s; }
+
+  /* Form */
+  .form-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .form-head {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .form-head-title {
+    font-family: var(--ff-serif); font-size: 1.25rem; font-weight: 600; color: var(--ink);
+  }
+  .form-head-sub { font-size: .78rem; color: var(--muted); margin-top: .2rem; }
+  .form-body { padding: 1.8rem 2rem; }
+
+  .field { margin-bottom: 1.1rem; }
+  .field label {
+    display: block; font-size: .62rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: .38rem;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--rule-dark);
+    border-radius: 5px;
+    padding: .7rem .95rem;
+    color: var(--ink);
+    font-family: var(--ff-sans);
+    font-size: .88rem;
+    outline: none;
+    transition: border-color .18s, box-shadow .18s;
+    resize: vertical;
+    appearance: none;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    border-color: var(--accent-line);
+    box-shadow: 0 0 0 3px rgba(61,139,106,.1);
+    background: var(--surface);
+  }
+  .field textarea { min-height: 110px; line-height: 1.6; }
+  .field select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238a8a96' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; padding-right: 2.2rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .send-btn {
+    width: 100%; padding: .78rem;
+    background: var(--accent); color: #fff;
+    font-family: var(--ff-sans); font-size: .75rem; font-weight: 700; letter-spacing: .06em;
+    border: none; border-radius: 5px; cursor: pointer;
+    transition: background .18s, box-shadow .18s;
+    margin-top: .4rem;
+  }
+  .send-btn:hover { background: var(--accent-mid); box-shadow: 0 4px 16px rgba(26,58,42,.2); }
+
+  .form-note {
+    font-size: .72rem; color: var(--muted);
+    text-align: center; margin-top: .85rem; line-height: 1.6;
+  }
+
+  @media (max-width: 780px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page" style="max-width:960px;">
+  <p class="eyebrow reveal">Let's Talk</p>
+  <h1 class="display reveal">Get in <em>Touch</em></h1>
+  <div class="rule-line reveal"></div>
+
+  <div class="contact-layout">
+    <div class="contact-intro reveal">
+      <p>I am open to <strong>internship opportunities</strong>, research collaborations, open source projects, or just a conversation about Edge AI and model quantization.</p>
+      <p>Fill out the form — clicking the button opens your email app with everything pre-filled and sent directly to my Gmail.</p>
+
+      <div class="link-list">
+        <a href="mailto:dilipsahu01022006@gmail.com" class="cl">
+          <div class="cl-abbr">GM</div>
+          <div class="cl-inner">
+            <span class="cl-label">Email</span>
+            <span class="cl-val">dilipsahu01022006@gmail.com</span>
+          </div>
+        </a>
+        <a href="tel:+918233958847" class="cl">
+          <div class="cl-abbr">PH</div>
+          <div class="cl-inner">
+            <span class="cl-label">Phone</span>
+            <span class="cl-val">+91 82339 58847</span>
+          </div>
+        </a>
+        <a href="https://github.com/dilipsahu" target="_blank" class="cl">
+          <div class="cl-abbr">GH</div>
+          <div class="cl-inner">
+            <span class="cl-label">GitHub</span>
+            <span class="cl-val">github.com/dilipsahu</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/dilipsahu" target="_blank" class="cl">
+          <div class="cl-abbr">LI</div>
+          <div class="cl-inner">
+            <span class="cl-label">LinkedIn</span>
+            <span class="cl-val">linkedin.com/in/dilipsahu</span>
+          </div>
+        </a>
+        <a href="https://leetcode.com/dilipsahu" target="_blank" class="cl">
+          <div class="cl-abbr">LC</div>
+          <div class="cl-inner">
+            <span class="cl-label">LeetCode</span>
+            <span class="cl-val">leetcode.com/dilipsahu</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="form-card reveal d2">
+      <div class="form-head">
+        <div class="form-head-title">Send a Message</div>
+        <div class="form-head-sub">Opens your email app with this message pre-filled.</div>
+      </div>
+      <div class="form-body">
+        <div class="form-row">
+          <div class="field">
+            <label>Your Name</label>
+            <input type="text" id="senderName" autocomplete="name"/>
+          </div>
+          <div class="field">
+            <label>Your Email</label>
+            <input type="email" id="senderEmail" autocomplete="email"/>
+          </div>
+        </div>
+        <div class="field">
+          <label>Topic</label>
+          <select id="subjectSelect">
+            <option value="">Select a topic...</option>
+            <option value="Internship Opportunity">Internship Opportunity</option>
+            <option value="Research Collaboration">Research Collaboration</option>
+            <option value="Open Source">Open Source / Contribution</option>
+            <option value="Project Discussion">Project Discussion</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Message</label>
+          <textarea id="messageBody"></textarea>
+        </div>
+        <button class="send-btn" onclick="handleSend()">Open in Email App</button>
+        <p class="form-note">
+          Will open Gmail or your default email app, addressed to
+          <strong style="color:var(--body-c);">dilipsahu01022006@gmail.com</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function handleSend() {
+    const name    = document.getElementById('senderName').value.trim();
+    const email   = document.getElementById('senderEmail').value.trim();
+    const topic   = document.getElementById('subjectSelect').value;
+    const message = document.getElementById('messageBody').value.trim();
+    if (!name || !message) { alert('Please enter your name and message.'); return; }
+    const subject = topic ? `[Portfolio] ${topic} — from ${name}` : `[Portfolio] Message from ${name}`;
+    const body    = email ? `From: ${name} (${email})\n\n${message}` : `From: ${name}\n\n${message}`;
+    window.location.href = 'mailto:dilipsahu01022006@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+</script>
+</body>
+</html>

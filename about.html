@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .about-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-bottom: 6rem;
+  }
+  .about-sidebar { position: sticky; top: calc(var(--nav-h) + 2rem); }
+
+  .info-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .info-card-head {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--ff-sans);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .info-row {
+    padding: .8rem 1.5rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: .18rem;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .ir-label {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .ir-val { font-size: .85rem; color: var(--ink); }
+  .ir-val a { color: var(--accent-mid); text-decoration: none; }
+  .ir-val a:hover { text-decoration: underline; }
+
+  .about-body p {
+    font-size: .94rem;
+    color: var(--body-c);
+    line-height: 1.82;
+    margin-bottom: .95rem;
+  }
+  .about-body p strong { color: var(--ink); font-weight: 600; }
+  .about-body h3 {
+    font-family: var(--ff-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2.2rem 0 .7rem;
+    letter-spacing: -.01em;
+  }
+
+  .cp-strip {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    padding: 1.5rem 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-xs);
+  }
+  .cp-item .cp-val {
+    font-family: var(--ff-serif);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+    line-height: 1;
+  }
+  .cp-item .cp-lbl { font-size: .72rem; color: var(--muted); margin-top: .3rem; }
+
+  /* Skills */
+  .skills-wrap { border-top: 1px solid var(--rule); padding-top: 4.5rem; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .sk-cell {
+    background: var(--surface);
+    padding: 1.5rem 1.6rem;
+    transition: background .18s;
+  }
+  .sk-cell:hover { background: var(--accent-lt); }
+  .sk-head {
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin-bottom: .9rem;
+    padding-bottom: .7rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .sk-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+
+  @media (max-width: 800px) {
+    .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">About</p>
+  <h1 class="display reveal">Background<br>&amp; <em>Skills</em></h1>
+  <div class="rule-line reveal"></div>
+
+  <div class="about-layout">
+    <aside class="about-sidebar reveal">
+      <div class="info-card">
+        <div class="info-card-head">Profile</div>
+        <div class="info-row"><span class="ir-label">Degree</span><span class="ir-val">B.Tech, Computer Science &amp; Engineering</span></div>
+        <div class="info-row"><span class="ir-label">Institution</span><span class="ir-val">NIT Mizoram</span></div>
+        <div class="info-row"><span class="ir-label">Year</span><span class="ir-val">2nd Year (4th Sem) &middot; Expected May 2028</span></div>
+        <div class="info-row"><span class="ir-label">CGPA</span><span class="ir-val">7.70 / 10.0</span></div>
+        <div class="info-row"><span class="ir-label">Location</span><span class="ir-val">Aizawl, Mizoram</span></div>
+        <div class="info-row"><span class="ir-label">Home</span><span class="ir-val">Jaipur, Rajasthan</span></div>
+        <div class="info-row"><span class="ir-label">Email</span><span class="ir-val"><a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a></span></div>
+        <div class="info-row"><span class="ir-label">Phone</span><span class="ir-val">+91 82339 58847</span></div>
+        <div class="info-row"><span class="ir-label">Coursework</span><span class="ir-val">DSA, OOP, System Programming, Computer Architecture, OS, DBMS, Linear Algebra, Probability &amp; Statistics</span></div>
+      </div>
+    </aside>
+
+    <div class="about-body reveal d1">
+      <h3>Who I Am</h3>
+      <p>I am a 2nd-year B.Tech Computer Science student at NIT Mizoram. I prefer understanding systems from first principles rather than relying on abstractions — I have implemented neural networks manually in Java and Python, written ESP32 firmware from scratch in C++, and traced precision bugs through production-grade codebases.</p>
+      <p>My work spans machine learning, systems programming, IoT firmware, and algorithm design. These are not separate interests but different layers of the same fascination: how computation works at every level of abstraction.</p>
+
+      <h3>Research Focus</h3>
+      <p>My primary interest is <strong>Edge AI and Model Quantization</strong>. I independently connected bit-width representation from Computer Architecture lectures to weight compression in neural networks — which led me to study Binary Neural Networks, 1-bit LLMs (BitNet, BitNet b1.58), and on-device inference pipelines before formally studying machine learning.</p>
+      <p>I am currently developing a concept for a <strong>locally-running AI scam call detector</strong> for low-end Indian smartphones — zero cloud dependency, no data sharing, using quantized speech models on-device.</p>
+
+      <h3>Open Source</h3>
+      <p>In September 2025, I diagnosed a floating-point precision discrepancy in OpenCV caused by MinGW's default FPU extended-precision mode on Windows. I traced the root cause through the production C++ codebase, applied a targeted patch, and submitted a Pull Request to the upstream repository.</p>
+
+      <h3>Leadership</h3>
+      <p>I serve as <strong>Team Head — Website &amp; Social Media</strong> at the Coding &amp; AI Club, NIT Mizoram. I lead the official club website, run weekly DSA and Git workshops for 50+ students, and founded the "Zero to Hero" mentorship program where beginners reach medium-level competitive programming within one semester.</p>
+
+      <h3>Competitive Programming</h3>
+      <div class="cp-strip">
+        <div class="cp-item"><span class="cp-val">160+</span><span class="cp-lbl">LeetCode Problems</span></div>
+        <div class="cp-item"><span class="cp-val">200+</span><span class="cp-lbl">Striver's A2Z DSA Sheet</span></div>
+        <div class="cp-item"><span class="cp-val">Active</span><span class="cp-lbl">GFG 60-Day POTD &middot; NPCI Edition</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-wrap">
+    <p class="eyebrow reveal">Skills</p>
+    <h2 class="section-title reveal">Technical <em>Stack</em></h2>
+    <div class="rule-line reveal"></div>
+    <div class="skills-grid">
+      <div class="sk-cell reveal">
+        <div class="sk-head">Languages</div>
+        <div class="sk-tags">
+          <span class="tag tag-accent">C</span>
+          <span class="tag tag-accent">C++</span>
+          <span class="tag tag-accent">Java</span>
+          <span class="tag tag-accent">Python</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal d1">
+        <div class="sk-head">AI / ML</div>
+        <div class="sk-tags">
+          <span class="tag tag-accent">Neural Networks</span>
+          <span class="tag tag-accent">Deep Learning</span>
+          <span class="tag tag-accent">Model Quantization</span>
+          <span class="tag tag-accent">Edge AI</span>
+          <span class="tag tag-accent">Binary NNs</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Computer Vision</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal d2">
+        <div class="sk-head">Core CS</div>
+        <div class="sk-tags">
+          <span class="tag tag-accent">DSA</span>
+          <span class="tag tag-accent">OOP</span>
+          <span class="tag tag-accent">Computer Architecture</span>
+          <span class="tag tag-accent">System Programming</span>
+          <span class="tag">OS Fundamentals</span>
+          <span class="tag">Algorithm Complexity</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal">
+        <div class="sk-head">Backend &amp; Tools</div>
+        <div class="sk-tags">
+          <span class="tag tag-done">Flask</span>
+          <span class="tag tag-done">REST APIs</span>
+          <span class="tag tag-done">MySQL</span>
+          <span class="tag">HTML / CSS / JS</span>
+          <span class="tag">Git &amp; GitHub</span>
+          <span class="tag">Linux (Ubuntu)</span>
+          <span class="tag">LaTeX</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal d1">
+        <div class="sk-head">Hardware &amp; IoT</div>
+        <div class="sk-tags">
+          <span class="tag tag-accent">ESP32</span>
+          <span class="tag tag-accent">Arduino</span>
+          <span class="tag tag-accent">GPS Integration</span>
+          <span class="tag">Firmware (C++)</span>
+          <span class="tag">Wi-Fi Telemetry</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal d2">
+        <div class="sk-head">Libraries</div>
+        <div class="sk-tags">
+          <span class="tag">NumPy</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Swing / AWT</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal">
+        <div class="sk-head">Design &amp; Media</div>
+        <div class="sk-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Canva</span>
+          <span class="tag">Adobe Express</span>
+          <span class="tag">CapCut</span>
+        </div>
+      </div>
+      <div class="sk-cell reveal d1">
+        <div class="sk-head">Currently Learning</div>
+        <div class="sk-tags">
+          <span class="tag tag-warm">Supervised ML</span>
+          <span class="tag tag-warm">CNNs / RNNs</span>
+          <span class="tag">Advanced MySQL</span>
+          <span class="tag">NoSQL</span>
+          <span class="tag">Feature Engineering</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

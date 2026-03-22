@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Certifications — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 5rem;
+  }
+  .cert-cell {
+    background: var(--surface);
+    padding: 2rem 2rem 2.2rem;
+    transition: background .18s;
+    display: flex; flex-direction: column;
+  }
+  .cert-cell:hover { background: var(--accent-lt); }
+  .cert-num {
+    font-family: var(--ff-serif);
+    font-size: 2.5rem; font-weight: 600; color: var(--rule-dark);
+    line-height: 1; margin-bottom: 1.2rem;
+  }
+  .cert-issuer {
+    font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent-mid); margin-bottom: .5rem;
+  }
+  .cert-name {
+    font-family: var(--ff-serif);
+    font-size: 1.15rem; font-weight: 600; color: var(--ink);
+    margin-bottom: .7rem; line-height: 1.25; flex: 1;
+  }
+  .cert-desc { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+
+  /* Achievements */
+  .ach-section { border-top: 1px solid var(--rule); padding-top: 4.5rem; margin-bottom: 5rem; }
+  .ach-table {
+    width: 100%;
+    border: 1px solid var(--rule);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border-collapse: collapse;
+  }
+  .ach-table tbody tr {
+    border-bottom: 1px solid var(--rule);
+    transition: background .15s;
+  }
+  .ach-table tbody tr:last-child { border-bottom: none; }
+  .ach-table tbody tr:hover { background: var(--accent-lt); }
+  .ach-table td {
+    padding: 1.1rem 1.8rem;
+    font-size: .88rem; color: var(--body-c);
+    vertical-align: middle;
+  }
+  .ach-table td:first-child {
+    font-family: var(--ff-serif);
+    font-size: 1.2rem; font-weight: 600; color: var(--accent-mid);
+    width: 80px; border-right: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  .ach-title-td {
+    font-weight: 600; color: var(--ink); display: block; margin-bottom: .15rem;
+    font-family: var(--ff-sans); font-size: .88rem;
+  }
+  .ach-sub-td { font-size: .8rem; color: var(--muted); }
+
+  /* CP */
+  .cp-section { border-top: 1px solid var(--rule); padding-top: 4.5rem; }
+  .cp-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--rule);
+    border: 1px solid var(--rule); border-radius: var(--r);
+    overflow: hidden; box-shadow: var(--shadow-sm);
+  }
+  .cp-cell {
+    background: var(--surface); padding: 2rem 2rem 2.2rem;
+    transition: background .18s;
+  }
+  .cp-cell:hover { background: var(--accent-lt); }
+  .cp-val-big {
+    font-family: var(--ff-serif);
+    font-size: 2.8rem; font-weight: 600; color: var(--ink);
+    line-height: 1; display: block; margin-bottom: .5rem;
+  }
+  .cp-platform-label {
+    font-size: .65rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent-mid); margin-bottom: .4rem;
+  }
+  .cp-desc { font-size: .8rem; color: var(--muted); line-height: 1.6; }
+
+  @media (max-width: 600px) {
+    .cp-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">Credentials</p>
+  <h1 class="display reveal">Certifications<br>&amp; <em>Achievements</em></h1>
+  <div class="rule-line reveal"></div>
+
+  <div class="certs-grid">
+    <div class="cert-cell reveal">
+      <div class="cert-num">01</div>
+      <div class="cert-issuer">SWAYAM &middot; NPTEL</div>
+      <div class="cert-name">Fundamentals of Cybersecurity</div>
+      <p class="cert-desc">Government-backed course covering core cybersecurity principles, threat models, cryptographic foundations, and defensive strategies in modern information systems.</p>
+    </div>
+    <div class="cert-cell reveal d1">
+      <div class="cert-num">02</div>
+      <div class="cert-issuer">Scaler Academy</div>
+      <div class="cert-name">Scaler Training Program</div>
+      <p class="cert-desc">Intensive training in Data Structures, Algorithms, System Design, and software engineering best practices. Emphasis on problem-solving at scale and production-grade code quality.</p>
+    </div>
+    <div class="cert-cell reveal d2">
+      <div class="cert-num">03</div>
+      <div class="cert-issuer">Workshop Bootcamp</div>
+      <div class="cert-name">5-Day Drone Workshop Bootcamp</div>
+      <p class="cert-desc">Hands-on workshop covering drone hardware architecture, flight controllers, autonomous navigation principles, sensor integration, and embedded systems programming for aerial applications.</p>
+    </div>
+  </div>
+
+  <div class="ach-section">
+    <p class="eyebrow reveal">Recognition</p>
+    <h2 class="section-title reveal">Achievements</h2>
+    <div class="rule-line reveal"></div>
+    <table class="ach-table reveal">
+      <tbody>
+        <tr>
+          <td>1st</td>
+          <td><span class="ach-title-td">DSA Problem Solving Challenge</span><span class="ach-sub-td">Coding &amp; AI Club, NIT Mizoram &middot; 2025 &middot; Ranked first out of all club participants.</span></td>
+        </tr>
+        <tr>
+          <td>1st</td>
+          <td><span class="ach-title-td">Club Logo Design Competition</span><span class="ach-sub-td">Coding &amp; AI Club, NIT Mizoram &middot; 2025 &middot; Winning design adopted as the official club logo.</span></td>
+        </tr>
+        <tr>
+          <td>OSS</td>
+          <td><span class="ach-title-td">OpenCV Open Source Contributor</span><span class="ach-sub-td">Contributed a bug fix for a floating-point precision issue in the OpenCV production codebase &middot; Sep 2025.</span></td>
+        </tr>
+        <tr>
+          <td>GFG</td>
+          <td><span class="ach-title-td">60-Day POTD Challenge</span><span class="ach-sub-td">GeeksforGeeks &middot; NPCI Edition &middot; Currently active, solving one problem every day.</span></td>
+        </tr>
+        <tr>
+          <td>Head</td>
+          <td><span class="ach-title-td">Team Head — Coding &amp; AI Club</span><span class="ach-sub-td">Website &amp; Social Media Team Lead since Feb 2025 &middot; 50+ students mentored &middot; "Zero to Hero" program founder.</span></td>
+        </tr>
+        <tr>
+          <td>Kgl</td>
+          <td><span class="ach-title-td">Kaggle Active Participant</span><span class="ach-sub-td">Competing in the deep-past-initiative Akkadian Language Machine Translation challenge &middot; Ongoing.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cp-section">
+    <p class="eyebrow reveal">Competitive Programming</p>
+    <h2 class="section-title reveal">Problem Solving</h2>
+    <div class="rule-line reveal"></div>
+    <div class="cp-grid">
+      <div class="cp-cell reveal">
+        <span class="cp-val-big">160+</span>
+        <div class="cp-platform-label">LeetCode</div>
+        <p class="cp-desc">Problems solved covering Arrays, Trees, Graphs, Dynamic Programming, and more.</p>
+      </div>
+      <div class="cp-cell reveal d1">
+        <span class="cp-val-big">200+</span>
+        <div class="cp-platform-label">Striver's A2Z</div>
+        <p class="cp-desc">DSA Sheet — Trees, Graphs, Dynamic Programming, Segment Trees.</p>
+      </div>
+      <div class="cp-cell reveal d2">
+        <span class="cp-val-big">Active</span>
+        <div class="cp-platform-label">GFG POTD</div>
+        <p class="cp-desc">60-Day Problem of the Day Challenge, NPCI Edition — ongoing daily streak.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

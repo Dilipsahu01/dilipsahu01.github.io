@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dilip Sahu — CS Engineer</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  /* ── HERO ── */
+  .hero {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 6rem 2.5rem 0;
+    min-height: calc(100vh - var(--nav-h));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-role {
+    font-family: var(--ff-sans);
+    font-size: .67rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.6rem;
+    opacity: 0; animation: fup .55s .1s forwards;
+  }
+  .hero-role span {
+    display: inline-block;
+    width: 22px; height: 1px;
+    background: var(--rule-dark);
+    vertical-align: middle;
+    margin-right: .6rem;
+  }
+  h1.hero-name {
+    font-family: var(--ff-serif);
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-weight: 600;
+    line-height: .95;
+    color: var(--ink);
+    letter-spacing: -.03em;
+    margin-bottom: 2.4rem;
+    opacity: 0; animation: fup .6s .22s forwards;
+  }
+  h1.hero-name em { font-style: italic; color: var(--accent-mid); }
+
+  .hero-desc {
+    font-size: 1.02rem;
+    line-height: 1.82;
+    color: var(--body-c);
+    max-width: 520px;
+    margin-bottom: 2.6rem;
+    opacity: 0; animation: fup .6s .36s forwards;
+  }
+  .hero-desc strong { color: var(--ink); font-weight: 600; }
+
+  .hero-actions {
+    display: flex; gap: .75rem; flex-wrap: wrap;
+    opacity: 0; animation: fup .6s .5s forwards;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-grid { opacity: 0; animation: fup .6s .65s forwards; }
+
+  /* ── QUICK NAV ── */
+  .quick-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .qn-item {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 2rem 2rem 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background .18s;
+  }
+  .qn-item:hover { background: var(--accent-lt); }
+  .qn-num {
+    font-family: var(--ff-serif);
+    font-size: .85rem;
+    color: var(--muted);
+    display: block;
+    margin-bottom: .8rem;
+  }
+  .qn-title {
+    font-family: var(--ff-sans);
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: .4rem;
+  }
+  .qn-desc { font-size: .78rem; color: var(--muted); line-height: 1.6; margin-bottom: .9rem; }
+  .qn-arrow {
+    font-family: var(--ff-sans);
+    font-size: .67rem;
+    font-weight: 600;
+    color: var(--accent-mid);
+    letter-spacing: .04em;
+  }
+
+  @keyframes fup {
+    from { opacity:0; transform:translateY(14px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  @media (max-width: 720px) {
+    .hero { padding: 4rem 1.4rem 0; }
+    .quick-nav { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .quick-nav { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <p class="hero-role"><span></span>B.Tech CSE &nbsp;&middot;&nbsp; NIT Mizoram &nbsp;&middot;&nbsp; 2nd Year</p>
+  <h1 class="hero-name">Dilip<br><em>Sahu</em></h1>
+  <p class="hero-desc">
+    Computer Science engineer building things at the edge of
+    <strong>systems programming</strong> and <strong>on-device AI</strong>.
+    I write firmware, implement neural networks from scratch,
+    and contribute to open source.
+  </p>
+  <div class="hero-actions">
+    <a href="projects.html"  class="btn btn-fill">View Projects</a>
+    <a href="about.html"     class="btn btn-ghost">About Me</a>
+    <a href="contact.html"   class="btn btn-ghost">Contact</a>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-item">
+      <span class="stat-val">7.70</span>
+      <span class="stat-lbl">CGPA / 10.0</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">160+</span>
+      <span class="stat-lbl">LeetCode Problems</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">200+</span>
+      <span class="stat-lbl">DSA Sheet Solved</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">50+</span>
+      <span class="stat-lbl">Students Mentored</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-val">1</span>
+      <span class="stat-lbl">OpenCV Contribution</span>
+    </div>
+  </div>
+</div>
+
+<div class="quick-nav" style="margin-top:5rem;">
+  <a href="projects.html" class="qn-item">
+    <span class="qn-num">01</span>
+    <div class="qn-title">Projects</div>
+    <p class="qn-desc">IoT bus tracker, binary neural network, puzzle solver, NLP translation and more.</p>
+    <span class="qn-arrow">View all &rarr;</span>
+  </a>
+  <a href="about.html" class="qn-item">
+    <span class="qn-num">02</span>
+    <div class="qn-title">Skills &amp; Stack</div>
+    <p class="qn-desc">C, C++, Java, Python, Flask, ESP32, machine learning from first principles.</p>
+    <span class="qn-arrow">See full stack &rarr;</span>
+  </a>
+  <a href="certifications.html" class="qn-item">
+    <span class="qn-num">03</span>
+    <div class="qn-title">Certifications</div>
+    <p class="qn-desc">NPTEL Cybersecurity, Scaler, Drone Workshop, and competition wins.</p>
+    <span class="qn-arrow">View credentials &rarr;</span>
+  </a>
+  <a href="research.html" class="qn-item">
+    <span class="qn-num">04</span>
+    <div class="qn-title">Research &amp; Ideas</div>
+    <p class="qn-desc">Binary NNs, BitNet, Edge AI, and upcoming project concepts.</p>
+    <span class="qn-arrow">Explore &rarr;</span>
+  </a>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+</body>
+</html>

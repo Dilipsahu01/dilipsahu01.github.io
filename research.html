@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Research — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+  .col-label {
+    font-size: .62rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 1.5rem; padding-bottom: .75rem; border-bottom: 1px solid var(--rule);
+  }
+
+  .research-list { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .ri {
+    background: var(--surface); padding: 1.5rem 1.8rem;
+    transition: background .18s; border-left: 3px solid transparent;
+    transition: background .18s, border-color .18s;
+  }
+  .ri:hover { background: var(--accent-lt); border-left-color: var(--accent-line); }
+  .ri-title {
+    font-family: var(--ff-sans); font-size: .9rem; font-weight: 700;
+    color: var(--ink); margin-bottom: .4rem;
+  }
+  .ri-desc { font-size: .83rem; color: var(--body-c); line-height: 1.72; margin-bottom: .65rem; }
+  .ri-refs { display: flex; flex-wrap: wrap; gap: .35rem; }
+
+  /* Ideas */
+  .idea-list { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
+  .idea {
+    background: var(--surface);
+    padding: 1.5rem 1.8rem;
+    position: relative;
+    transition: background .18s;
+  }
+  .idea:hover { background: #fafaf8; }
+  .idea-stage-badge {
+    font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: .18rem .58rem; border-radius: 3px; position: absolute; top: 1.3rem; right: 1.5rem;
+  }
+  .idea-title {
+    font-family: var(--ff-serif); font-size: 1.15rem; font-weight: 600; color: var(--ink);
+    margin-bottom: .45rem; padding-right: 7rem; line-height: 1.25;
+  }
+  .idea-desc { font-size: .83rem; color: var(--body-c); line-height: 1.72; margin-bottom: .7rem; }
+  .idea-tags { display: flex; flex-wrap: wrap; gap: .35rem; }
+
+  /* Context callout */
+  .callout {
+    background: var(--accent-lt);
+    border: 1px solid #b2d4c3;
+    border-left: 3px solid var(--accent-line);
+    border-radius: var(--r);
+    padding: 1.3rem 1.7rem;
+    font-size: .88rem; color: var(--ink); line-height: 1.75;
+    margin-bottom: 3.5rem;
+  }
+  .callout strong { font-weight: 700; color: var(--accent); }
+
+  @media (max-width: 800px) {
+    .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="research.html" class="active">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">Ideas &amp; Exploration</p>
+  <h1 class="display reveal">Research &amp;<br><em>Upcoming Work</em></h1>
+  <div class="rule-line reveal"></div>
+
+  <div class="callout reveal">
+    <strong>Context</strong> &mdash; My research interests emerged from connecting Computer Architecture coursework to machine learning. Realising that bit-width representation in hardware directly maps to weight quantization in neural networks led me to explore Binary Neural Networks, 1-bit LLMs, and on-device inference pipelines independently of any formal ML course.
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="col-label reveal">Active Research Areas</div>
+      <div class="research-list">
+        <div class="ri reveal">
+          <div class="ri-title">Model Quantization (1-bit / 4-bit / 8-bit)</div>
+          <p class="ri-desc">Exploring how reducing the bit-width of neural network weights reduces memory and computation cost — enabling powerful models to run on constrained hardware. The Digit Recognition project served as a testbed for binary input encoding.</p>
+          <div class="ri-refs">
+            <span class="tag">BitNet</span>
+            <span class="tag">BitNet b1.58</span>
+            <span class="tag">INT4 / INT8</span>
+          </div>
+        </div>
+        <div class="ri reveal">
+          <div class="ri-title">Binary Neural Networks</div>
+          <p class="ri-desc">Studying BinaryConnect and XNOR-Net — networks where weights and activations are constrained to {−1, +1}. XNOR and popcount operations replace multiply-accumulate, making BNNs fast on standard hardware without special accelerators.</p>
+          <div class="ri-refs">
+            <span class="tag">BinaryConnect</span>
+            <span class="tag">XNOR-Net</span>
+            <span class="tag">Binary Activations</span>
+          </div>
+        </div>
+        <div class="ri reveal">
+          <div class="ri-title">1-bit LLMs — BitNet &amp; BitNet b1.58</div>
+          <p class="ri-desc">Studying Microsoft Research's approach to extreme quantization in large language models. BitNet b1.58 constrains every weight to {−1, 0, +1} with comparable performance to full-precision models, making LLM inference viable on commodity hardware.</p>
+          <div class="ri-refs">
+            <span class="tag">BitNet Paper</span>
+            <span class="tag">b1.58</span>
+            <span class="tag">LLM Inference</span>
+          </div>
+        </div>
+        <div class="ri reveal">
+          <div class="ri-title">On-Device AI Inference &amp; Edge AI</div>
+          <p class="ri-desc">Studying end-to-end deployment pipelines for running quantized models locally on mobile and embedded devices — zero latency, no cloud dependency. Directly motivates the scam detector idea.</p>
+          <div class="ri-refs">
+            <span class="tag">TFLite</span>
+            <span class="tag">ONNX Runtime</span>
+            <span class="tag">On-Device</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="col-label reveal">Upcoming Project Ideas</div>
+      <div class="idea-list">
+        <div class="idea reveal">
+          <span class="idea-stage-badge badge badge-ongoing">Concept</span>
+          <div class="idea-title">AI Scam Call Detector for Low-End Phones</div>
+          <p class="idea-desc">A locally-running AI system to detect scam calls in real-time on low-end Indian smartphones. Uses a quantized speech model to analyse call audio on-device — no cloud, no data sharing, instant alerts.</p>
+          <div class="idea-tags">
+            <span class="tag tag-accent">Edge AI</span>
+            <span class="tag tag-accent">Quantized Speech</span>
+            <span class="tag">On-Device</span>
+            <span class="tag">Android</span>
+          </div>
+        </div>
+        <div class="idea reveal">
+          <span class="idea-stage-badge badge badge-done">Exploring</span>
+          <div class="idea-title">Full Binary Neural Network from Scratch</div>
+          <p class="idea-desc">Extending the Digit Recognition project to a complete BNN — binary weights, activations, and inputs throughout. Goal: maximum accuracy at minimum memory footprint, deployable on ESP32.</p>
+          <div class="idea-tags">
+            <span class="tag tag-accent">BNN</span>
+            <span class="tag tag-accent">1-bit Weights</span>
+            <span class="tag">XNOR-Net</span>
+            <span class="tag">ESP32</span>
+          </div>
+        </div>
+        <div class="idea reveal">
+          <span class="idea-stage-badge badge badge-live">Planned</span>
+          <div class="idea-title">Open Source ML Library Contribution</div>
+          <p class="idea-desc">Following the OpenCV contribution, planning to contribute to a Python ML library — NumPy, PyTorch, or Scikit-learn. Focus: numerical precision, performance optimisation, or quantization-related utilities.</p>
+          <div class="idea-tags">
+            <span class="tag tag-accent">Open Source</span>
+            <span class="tag">Python</span>
+            <span class="tag">NumPy / PyTorch</span>
+          </div>
+        </div>
+        <div class="idea reveal">
+          <span class="idea-stage-badge badge badge-live">Planned</span>
+          <div class="idea-title">BNN Research Paper</div>
+          <p class="idea-desc">If BNN-from-scratch experiments yield interesting accuracy/memory tradeoff results on constrained devices, documenting findings in a structured technical report or workshop paper.</p>
+          <div class="idea-tags">
+            <span class="tag tag-accent">Research</span>
+            <span class="tag">LaTeX</span>
+            <span class="tag">Edge Devices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

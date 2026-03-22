@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .project-list { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 5rem; }
+  .project-row {
+    background: var(--surface);
+    padding: 2.2rem 2.5rem;
+    transition: background .18s;
+    cursor: default;
+  }
+  .project-row:hover { background: #fafaf8; }
+
+  .pr-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; margin-bottom: .9rem; flex-wrap: wrap;
+  }
+  .pr-meta {
+    font-size: .67rem; font-weight: 600; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: .35rem;
+  }
+  .pr-title {
+    font-family: var(--ff-serif);
+    font-size: 1.35rem; font-weight: 600; color: var(--ink);
+    letter-spacing: -.01em; line-height: 1.2;
+  }
+  .pr-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .9rem 0; }
+  .pr-points { list-style: none; }
+  .pr-points li {
+    font-size: .88rem; color: var(--body-c); line-height: 1.72;
+    padding: .45rem 0; border-bottom: 1px solid var(--rule);
+    display: flex; gap: .8rem; align-items: flex-start;
+  }
+  .pr-points li:last-child { border-bottom: none; }
+  .pr-points li::before {
+    content: ''; flex-shrink: 0;
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--accent-line);
+    margin-top: .68rem;
+  }
+  .pr-points li strong { color: var(--ink); font-weight: 600; }
+
+  /* OSS */
+  .oss-wrap { border-top: 1px solid var(--rule); padding-top: 4rem; }
+  .oss-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent-line);
+    border-radius: var(--r);
+    padding: 2rem 2.5rem;
+    box-shadow: var(--shadow-xs);
+  }
+  .oss-meta {
+    font-size: .65rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent-mid); margin-bottom: .4rem;
+  }
+  .oss-title {
+    font-family: var(--ff-serif);
+    font-size: 1.3rem; font-weight: 600; color: var(--ink);
+    margin-bottom: .9rem; letter-spacing: -.01em;
+  }
+  .oss-desc { font-size: .9rem; color: var(--body-c); line-height: 1.8; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">Portfolio</p>
+  <h1 class="display reveal"><em>Projects</em></h1>
+  <div class="rule-line reveal"></div>
+  <p class="lead reveal" style="margin-bottom:3.5rem;">All core logic built from scratch. No high-level framework shortcuts — each project reflects a problem I wanted to genuinely understand.</p>
+
+  <div class="project-list">
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Feb 2026 &mdash; Present</div>
+          <div class="pr-title">IoT-Based Campus Bus Tracking System</div>
+        </div>
+        <span class="badge badge-live">Active</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">ESP32</span>
+        <span class="tag tag-accent">C++</span>
+        <span class="tag tag-accent">Python</span>
+        <span class="tag tag-done">Flask</span>
+        <span class="tag tag-done">MySQL</span>
+        <span class="tag">REST API</span>
+        <span class="tag">IoT</span>
+      </div>
+      <ul class="pr-points">
+        <li>ESP32 Lead in a 5-member team — solely responsible for all microcontroller firmware, hardware wiring, and GPS module integration written in C++.</li>
+        <li>Designed the ESP32 as the system brain: GPS data acquisition, serial communication, and Wi-Fi telemetry transmission to a Flask REST API backend.</li>
+        <li>Built a complete real-time data pipeline — ESP32 reads GPS coordinates, transmits over Wi-Fi, Flask ingests, MySQL stores time-series telemetry.</li>
+        <li>Defined hardware-to-software data format contracts with backend teammates, ensuring clean separation between firmware and server logic.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Dec 2025</div>
+          <div class="pr-title">Digit Recognition — Binary Neural Network from Scratch</div>
+        </div>
+        <span class="badge badge-done">Completed</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Java</span>
+        <span class="tag tag-accent">Swing / AWT</span>
+        <span class="tag">MNIST</span>
+        <span class="tag">Neural Networks</span>
+        <span class="tag">1-bit Quantization</span>
+      </div>
+      <ul class="pr-points">
+        <li>Built a fully connected neural network entirely from scratch in Java with no ML libraries — manually implementing forward/back-propagation and gradient descent using custom data structures.</li>
+        <li>Implemented binary input encoding: normalized MNIST pixels and applied a custom threshold (0.3), converting all inputs to {0,1} — independently deriving a concept related to 1-bit quantization from Computer Architecture principles.</li>
+        <li><strong>96% accuracy</strong> on 500 test images trained on 10,000 MNIST samples, demonstrating that binary-encoded inputs retain sufficient discriminative information with minimal accuracy loss.</li>
+        <li>Real-time interactive Swing GUI with a matrix drawing panel for live digit recognition and step-by-step visualization.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Oct 2025</div>
+          <div class="pr-title">Water Studio Pro — Puzzle Solver</div>
+        </div>
+        <span class="badge badge-done">Completed</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Java</span>
+        <span class="tag tag-accent">Swing</span>
+        <span class="tag">DFS / BFS</span>
+        <span class="tag">Graph Algorithms</span>
+        <span class="tag">Memoization</span>
+        <span class="tag">MVC Pattern</span>
+      </div>
+      <ul class="pr-points">
+        <li>Desktop application solving "Water Sort" puzzles using graph traversal (DFS/BFS) — demonstrates core algorithm design and state-space search skills.</li>
+        <li>Optimized to solve 16-bottle configurations in under 2 seconds even for worst-case inputs, through state pruning and memoization.</li>
+        <li>Real-time step-by-step Swing GUI following MVC design pattern principles.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Ongoing</div>
+          <div class="pr-title">Akkadian Language Machine Translation</div>
+        </div>
+        <span class="badge badge-ongoing">Ongoing</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Python</span>
+        <span class="tag tag-accent">NLP</span>
+        <span class="tag">Kaggle</span>
+        <span class="tag">Seq2Seq</span>
+        <span class="tag">BLEU Score</span>
+      </div>
+      <ul class="pr-points">
+        <li>Competing in the Kaggle deep-past-initiative challenge — building ML translation models for the ancient Akkadian language, a low-resource NLP problem.</li>
+        <li>Exploring sequence-to-sequence modeling and tokenization strategies for morphologically rich, low-resource languages.</li>
+        <li>Developing skills in corpus analysis, data preprocessing, and evaluation metrics (BLEU score).</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Feb 2025 &mdash; Present</div>
+          <div class="pr-title">Coding &amp; AI Club — Official Website</div>
+        </div>
+        <span class="badge badge-dev">In Development</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag tag-done">MySQL</span>
+        <span class="tag">Git</span>
+      </div>
+      <ul class="pr-points">
+        <li>Leading development of the official NIT Mizoram Coding &amp; AI Club website with a cross-functional team of student contributors.</li>
+        <li>Managing Git branching strategy, task delegation, code reviews, and integration across contributors with varying skill levels.</li>
+        <li>Implemented RESTful API endpoints for frontend-backend communication with proper route design and error handling.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="oss-wrap">
+    <p class="eyebrow reveal">Open Source</p>
+    <h2 class="section-title reveal">Contributions</h2>
+    <div class="rule-line reveal"></div>
+    <div class="oss-card reveal">
+      <div class="oss-meta">C++ &middot; Sep 2025 &middot; Upstream Contributor</div>
+      <div class="oss-title">OpenCV — Bug Investigation &amp; Precision Fix</div>
+      <p class="oss-desc">Diagnosed a floating-point precision discrepancy in OpenCV caused by MinGW's default FPU extended-precision behavior on Windows — producing subtly incorrect numerical results compared to MSVC and GCC builds. Traced the root cause through the production C++ codebase, applied a targeted patch to enforce consistent double-precision semantics, and submitted a Pull Request to the upstream OpenCV repository.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.06});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
