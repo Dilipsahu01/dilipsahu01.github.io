@@ -71,13 +71,15 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="certifications.html">Certifications</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="competitions.html">Competitions</a></li>
+  <li><a href="certifications.html">Certifications</a></li>
+  <li><a href="clubs.html">Clubs</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
   </div>
 </nav>
 
@@ -89,118 +91,201 @@
 
   <div class="project-list">
 
+    
     <div class="project-row reveal">
       <div class="pr-top">
         <div>
-          <div class="pr-meta">Feb 2026 &mdash; Present</div>
-          <div class="pr-title">IoT-Based Campus Bus Tracking System</div>
+          <div class="pr-meta">Hackathon Winner</div>
+          <div class="pr-title">TourAI: AI-Powered Smart Travel Planning Platform <a href="https://github.com/Dilipsahu01/tourai_project" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+        </div>
+        <span class="badge badge-done">🥇 1st Place</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">FastAPI</span>
+        <span class="tag tag-accent">React 18</span>
+        <span class="tag tag-accent">Vite</span>
+        <span class="tag">Meta Prophet</span>
+        <span class="tag">Random Forest</span>
+        <span class="tag">Claude Sonnet 4</span>
+        <span class="tag">RAG</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Docker Compose</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">Framer Motion</span>
+      </div>
+      <ul class="pr-points">
+        <li><strong>Description:</strong> Full-stack AI travel planner that forecasts inflation-adjusted future trip costs, checks financial feasibility, generates EMI savings plans, and produces Claude-generated day-by-day itineraries.</li>
+        <li>6-module ML pipeline: Prophet → Random Forest → Installment Engine → Claude LLM → RAG → Alternative Finder. Prophet model trained on hand-curated 15-year Mizoram dataset.</li>
+        <li>Random Forest classifier: 100 estimators, features — savings_burden_ratio, income_surplus, months_available, cost_ratio.</li>
+        <li>JWT auth, user dashboard, gamified milestone savings rewards (₹250 bonus per 25% milestone).</li>
+        <li>Full Docker Compose stack: MySQL + FastAPI + Nginx-served React. Team: Dilip Sahu (Full-Stack + Backend).</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">IoT & Firmware</div>
+          <div class="pr-title">NITMZ Bus Tracker: IoT Real-Time Campus Bus Tracking <a href="https://github.com/Dilipsahu01/nitmz-bus-tracker" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
         </div>
         <span class="badge badge-live">Active</span>
       </div>
       <div class="pr-tags">
         <span class="tag tag-accent">ESP32</span>
         <span class="tag tag-accent">C++</span>
-        <span class="tag tag-accent">Python</span>
-        <span class="tag tag-done">Flask</span>
-        <span class="tag tag-done">MySQL</span>
-        <span class="tag">REST API</span>
-        <span class="tag">IoT</span>
+        <span class="tag tag-accent">NEO-6M GPS</span>
+        <span class="tag tag-accent">SIM800L GSM</span>
+        <span class="tag">Python Flask</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Leaflet.js</span>
       </div>
       <ul class="pr-points">
-        <li>ESP32 Lead in a 5-member team — solely responsible for all microcontroller firmware, hardware wiring, and GPS module integration written in C++.</li>
-        <li>Designed the ESP32 as the system brain: GPS data acquisition, serial communication, and Wi-Fi telemetry transmission to a Flask REST API backend.</li>
-        <li>Built a complete real-time data pipeline — ESP32 reads GPS coordinates, transmits over Wi-Fi, Flask ingests, MySQL stores time-series telemetry.</li>
-        <li>Defined hardware-to-software data format contracts with backend teammates, ensuring clean separation between firmware and server logic.</li>
+        <li><strong>Description:</strong> End-to-end IoT system for real-time campus bus tracking at NIT Mizoram; transmits GPS telemetry over dual-network (GSM primary, Wi-Fi secondary) to a cloud Flask backend, rendered live on Leaflet.js map.</li>
+        <li>1-second telemetry cycle; ~50ms Wi-Fi latency, 300–800ms GSM latency; ~2.5m GPS accuracy.</li>
+        <li>Dual-network failover with 60s GSM timeout; 10-packet circular buffer on ESP32 for outage continuity.</li>
+        <li>JSON telemetry: lat/lng, speed_kmh, satellites, hdop, fix status, network type, ISO-8601 UTC timestamp. Role-based access: students, caretakers, admins.</li>
+        <li>Hardware: ESP32 (240MHz), NEO-6M, SIM800L quad-band. Dilip's role: ESP32 Lead — all firmware (C++), hardware wiring, GPS integration.</li>
       </ul>
     </div>
 
     <div class="project-row reveal">
       <div class="pr-top">
         <div>
-          <div class="pr-meta">Dec 2025</div>
-          <div class="pr-title">Digit Recognition — Binary Neural Network from Scratch</div>
+          <div class="pr-meta">Core CS</div>
+          <div class="pr-title">Java Digit Recognizer: Neural Network from Scratch <a href="https://github.com/Dilipsahu01/JavaDigitRecognizer" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
         </div>
         <span class="badge badge-done">Completed</span>
       </div>
       <div class="pr-tags">
-        <span class="tag tag-accent">Java</span>
-        <span class="tag tag-accent">Swing / AWT</span>
-        <span class="tag">MNIST</span>
-        <span class="tag">Neural Networks</span>
-        <span class="tag">1-bit Quantization</span>
+        <span class="tag tag-accent">Core Java (JDK 8+)</span>
+        <span class="tag tag-accent">Java Swing</span>
+        <span class="tag tag-accent">MNIST dataset</span>
+        <span class="tag">MVC pattern</span>
       </div>
       <ul class="pr-points">
-        <li>Built a fully connected neural network entirely from scratch in Java with no ML libraries — manually implementing forward/back-propagation and gradient descent using custom data structures.</li>
-        <li>Implemented binary input encoding: normalized MNIST pixels and applied a custom threshold (0.3), converting all inputs to {0,1} — independently deriving a concept related to 1-bit quantization from Computer Architecture principles.</li>
-        <li><strong>96% accuracy</strong> on 500 test images trained on 10,000 MNIST samples, demonstrating that binary-encoded inputs retain sufficient discriminative information with minimal accuracy loss.</li>
-        <li>Real-time interactive Swing GUI with a matrix drawing panel for live digit recognition and step-by-step visualization.</li>
+        <li><strong>Description:</strong> Professional desktop app implementing a 3-layer feedforward neural network in pure Java — zero ML frameworks — trained on MNIST with an interactive 28×28 drawing canvas.</li>
+        <li>Architecture: 784 input → 128 hidden (Sigmoid) → 10 output (Softmax); Xavier weight initialization. Manual backpropagation with Java primitive arrays; learning rate 0.05.</li>
+        <li>96% accuracy on 500 MNIST test images after 10,000-sample training.</li>
+        <li>Pixel binarization: normalize /255 → threshold 0.3 → binary 0/1 (independently derived 1-bit quantization concept).</li>
+        <li>Persistent weights via brain.dat serialization; thread-safe training via SwingWorker.</li>
       </ul>
     </div>
 
     <div class="project-row reveal">
       <div class="pr-top">
         <div>
-          <div class="pr-meta">Oct 2025</div>
-          <div class="pr-title">Water Studio Pro — Puzzle Solver</div>
+          <div class="pr-meta">2026 &mdash; Present</div>
+          <div class="pr-title">CyberGuard-AI: On-Device AI Scam Call Detector <a href="https://github.com/Dilipsahu01/CyberGuard-AI" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+        </div>
+        <span class="badge badge-live">In Progress</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Python</span>
+        <span class="tag tag-accent">Whisper.cpp</span>
+        <span class="tag tag-accent">LoRA</span>
+        <span class="tag">GGUF</span>
+        <span class="tag">llama.cpp</span>
+        <span class="tag">Q4 quantization</span>
+      </div>
+      <ul class="pr-points">
+        <li><strong>Description:</strong> Privacy-first, fully on-device scam call detector for India. No server, no cloud. Targets low-end Android phones and laptops (~480MB footprint).</li>
+        <li>Pipeline: live mic → 16-parameter audio feature extraction → Whisper.cpp STT (Hindi/English/Hinglish) → LoRA adapter → phrase fast-path (200ms) → conversation arc tracker → Q4 GGUF LLM → SAFE/SUSPICIOUS/SCAM + confidence.</li>
+        <li>Dataset: 1,398 samples via 7B LLM on Kaggle T4 + Indian High Court records + YouTube scam call recordings.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Full-Stack AI</div>
+          <div class="pr-title">Document Intelligence Platform <a href="https://github.com/Dilipsahu01/document-intelligence-plateform" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+        </div>
+        <span class="badge badge-done">Completed</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Next.js</span>
+        <span class="tag tag-accent">TypeScript</span>
+        <span class="tag tag-accent">Tailwind CSS</span>
+        <span class="tag">Django REST</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">ChromaDB</span>
+        <span class="tag">RAG</span>
+        <span class="tag">LM Studio</span>
+      </div>
+      <ul class="pr-points">
+        <li><strong>Description:</strong> Full-stack RAG ecosystem that turns unstructured book data into searchable, AI-powered knowledge with a privacy-first local LLM.</li>
+        <li>Automated Selenium scraper ingests and normalizes book data.</li>
+        <li>Dual-database: MySQL (relational metadata) + ChromaDB (vector embeddings).</li>
+        <li>Privacy-centric: local LLM via LM Studio — zero cloud AI calls. Features semantic search, automated summaries, genre classification.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Web System</div>
+          <div class="pr-title">Senior Care Portal <a href="https://github.com/Dilipsahu01/senior-care-portal" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+        </div>
+        <span class="badge badge-done">Completed</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Python Flask</span>
+        <span class="tag tag-accent">SQLAlchemy</span>
+        <span class="tag tag-accent">MySQL 8.0</span>
+        <span class="tag">Flask-JWT-Extended</span>
+        <span class="tag">Jinja2</span>
+      </div>
+      <ul class="pr-points">
+        <li><strong>Description:</strong> Web-based management system for nursing homes — resident lifecycle, room management, prescriptions, activity logging, family visits, three-tier RBAC.</li>
+        <li>3NF-compliant 15-table relational schema.</li>
+        <li>Full resident lifecycle: admit → transfer → discharge → re-admit. Room types: private, joint, ward with live capacity tracking.</li>
+        <li>Three-tier RBAC (admin, nurse, family) via JWT; stateless audit logging.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Data Science</div>
+          <div class="pr-title">Hyperliquid × Bitcoin Sentiment Analysis <a href="https://github.com/Dilipsahu01/hyperliquid_sentiment_analysis" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+        </div>
+        <span class="badge badge-done">Completed</span>
+      </div>
+      <div class="pr-tags">
+        <span class="tag tag-accent">Python</span>
+        <span class="tag tag-accent">Pandas</span>
+        <span class="tag tag-accent">NumPy</span>
+        <span class="tag">SciPy</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">Statsmodels</span>
+        <span class="tag">Plotly</span>
+      </div>
+      <ul class="pr-points">
+        <li><strong>Description:</strong> Quantitative analysis of ~211K Hyperliquid perpetual futures trades merged with the Bitcoin Fear & Greed Index to study how sentiment regimes affect trader behavior.</li>
+        <li>Statistical tests: Kruskal-Wallis, Mann-Whitney, Spearman/Pearson correlations, VaR/CVaR.</li>
+        <li>17 auto-generated dark-theme charts + auto-rendered Markdown report. Built for Primetrade.ai Data Science Hiring Assignment.</li>
+      </ul>
+    </div>
+
+    <div class="project-row reveal">
+      <div class="pr-top">
+        <div>
+          <div class="pr-meta">Desktop App</div>
+          <div class="pr-title">Water Sort Studio Pro</div>
         </div>
         <span class="badge badge-done">Completed</span>
       </div>
       <div class="pr-tags">
         <span class="tag tag-accent">Java</span>
         <span class="tag tag-accent">Swing</span>
-        <span class="tag">DFS / BFS</span>
-        <span class="tag">Graph Algorithms</span>
+        <span class="tag tag-accent">DFS/BFS</span>
+        <span class="tag">Pruning</span>
         <span class="tag">Memoization</span>
-        <span class="tag">MVC Pattern</span>
       </div>
       <ul class="pr-points">
-        <li>Desktop application solving "Water Sort" puzzles using graph traversal (DFS/BFS) — demonstrates core algorithm design and state-space search skills.</li>
-        <li>Optimized to solve 16-bottle configurations in under 2 seconds even for worst-case inputs, through state pruning and memoization.</li>
-        <li>Real-time step-by-step Swing GUI following MVC design pattern principles.</li>
-      </ul>
-    </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Ongoing</div>
-          <div class="pr-title">Akkadian Language Machine Translation</div>
-        </div>
-        <span class="badge badge-ongoing">Ongoing</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Python</span>
-        <span class="tag tag-accent">NLP</span>
-        <span class="tag">Kaggle</span>
-        <span class="tag">Seq2Seq</span>
-        <span class="tag">BLEU Score</span>
-      </div>
-      <ul class="pr-points">
-        <li>Competing in the Kaggle deep-past-initiative challenge — building ML translation models for the ancient Akkadian language, a low-resource NLP problem.</li>
-        <li>Exploring sequence-to-sequence modeling and tokenization strategies for morphologically rich, low-resource languages.</li>
-        <li>Developing skills in corpus analysis, data preprocessing, and evaluation metrics (BLEU score).</li>
-      </ul>
-    </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Feb 2025 &mdash; Present</div>
-          <div class="pr-title">Coding &amp; AI Club — Official Website</div>
-        </div>
-        <span class="badge badge-dev">In Development</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag">HTML5</span>
-        <span class="tag">CSS3</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag tag-done">MySQL</span>
-        <span class="tag">Git</span>
-      </div>
-      <ul class="pr-points">
-        <li>Leading development of the official NIT Mizoram Coding &amp; AI Club website with a cross-functional team of student contributors.</li>
-        <li>Managing Git branching strategy, task delegation, code reviews, and integration across contributors with varying skill levels.</li>
-        <li>Implemented RESTful API endpoints for frontend-backend communication with proper route design and error handling.</li>
+        <li><strong>Description:</strong> Desktop puzzle solver for Water Sort puzzles using state-space graph search.</li>
+        <li>Solves 16-bottle worst-case in under 2 seconds via DFS/BFS + pruning + memoization.</li>
+        <li>Real-time step-by-step Swing GUI; MVC design pattern.</li>
       </ul>
     </div>
 
@@ -213,7 +298,7 @@
     <div class="oss-card reveal">
       <div class="oss-meta">C++ &middot; Sep 2025 &middot; Upstream Contributor</div>
       <div class="oss-title">OpenCV — Bug Investigation &amp; Precision Fix</div>
-      <p class="oss-desc">Diagnosed a floating-point precision discrepancy in OpenCV caused by MinGW's default FPU extended-precision behavior on Windows — producing subtly incorrect numerical results compared to MSVC and GCC builds. Traced the root cause through the production C++ codebase, applied a targeted patch to enforce consistent double-precision semantics, and submitted a Pull Request to the upstream OpenCV repository.</p>
+      <p class="oss-desc">Diagnosed a floating-point precision anomaly in OpenCV's Windows build caused by MinGW FPU extended-precision behavior; implemented strict double-precision semantics via PR.</p>
     </div>
   </div>
 </div>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Clubs &amp; Organizations — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+
+/* ─── HOW TO ADD MORE CLUBS ────────────────────────────────────────────
+   Copy one entire .club-card block (from
+to
+) and paste it below. Then update:
+   - club-name, club-role, club-period, club-desc
+   - .club-detail-row items (add/remove as needed)
+   - .photo-grid items — change src="photos/YOUR-IMAGE.jpg"
+     and put your image file inside the photos/ folder
+     (create a folder called "photos" inside your Portfolio folder)
+──────────────────────────────────────────────────────────────────────── */
+
+.clubs-list { display: flex; flex-direction: column; gap: 2.5rem; }
+
+/* ── Club card ── */
+.club-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow .22s;
+}
+.club-card:hover { box-shadow: var(--shadow-md); }
+
+.club-header {
+  padding: 2rem 2.5rem 1.6rem;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+.club-org {
+  font-size: .62rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--accent-mid); margin-bottom: .4rem;
+}
+.club-name {
+  font-family: var(--ff-serif);
+  font-size: 1.4rem; font-weight: 600; color: var(--ink);
+  letter-spacing: -.01em; line-height: 1.2;
+}
+.club-meta { text-align: right; display: flex; flex-direction: column; gap: .4rem; align-items: flex-end; }
+.club-role-badge {
+  font-family: var(--ff-sans); font-size: .68rem; font-weight: 700;
+  padding: .28rem .8rem; border-radius: 4px;
+  background: var(--accent); color: #fff;
+  white-space: nowrap;
+}
+.club-role-badge.member { background: var(--accent-lt); color: var(--accent); border: 1px solid #b2d4c3; }
+.club-period { font-size: .72rem; color: var(--muted); }
+
+.club-body { padding: 1.8rem 2.5rem; }
+.club-desc {
+  font-size: .9rem; color: var(--body-c); line-height: 1.8;
+  margin-bottom: 1.4rem; max-width: 700px;
+}
+
+/* Detail rows (bullet points) */
+.club-details { margin-bottom: 1.4rem; }
+.club-detail-row {
+  display: flex; gap: .75rem; align-items: flex-start;
+  padding: .4rem 0; border-bottom: 1px solid var(--rule);
+  font-size: .85rem; color: var(--body-c); line-height: 1.65;
+}
+.club-detail-row:last-child { border-bottom: none; }
+.club-detail-row::before {
+  content: ''; flex-shrink: 0;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent-line); margin-top: .62rem;
+}
+.club-detail-row strong { color: var(--ink); font-weight: 600; }
+
+/* Tags row */
+.club-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.8rem; }
+
+/* ── Photo grid ── */
+.photo-section-label {
+  font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: .9rem;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: .75rem;
+}
+.photo-slot {
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  position: relative;
+}
+.photo-slot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+.photo-slot:hover img { transform: scale(1.04); }
+
+/* Placeholder shown when no image is set */
+.photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  color: var(--muted); font-size: .72rem;
+  text-align: center; padding: .5rem;
+  gap: .4rem;
+}
+.photo-placeholder .ph-icon {
+  width: 28px; height: 28px;
+  border: 1.5px dashed var(--rule-dark);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; color: var(--rule-dark);
+}
+.photo-placeholder .ph-text { line-height: 1.4; color: var(--muted); font-size: .68rem; }
+
+/* Lightbox */
+.lightbox { display:none; position:fixed; inset:0; background:rgba(22,22,26,.88); z-index:999; align-items:center; justify-content:center; }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:90vw; max-height:88vh; border-radius:6px; object-fit:contain; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+.lightbox-close { position:absolute; top:1.2rem; right:1.5rem; font-size:1.8rem; color:#fff; cursor:pointer; line-height:1; opacity:.7; transition:opacity .15s; }
+.lightbox-close:hover { opacity:1; }
+
+@media (max-width:640px) {
+  .club-header { grid-template-columns: 1fr; }
+  .club-meta { align-items: flex-start; text-align:left; }
+  .club-body { padding: 1.4rem 1.4rem; }
+  .photo-grid { grid-template-columns: repeat(auto-fill, minmax(120px,1fr)); }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="competitions.html">Competitions</a></li>
+  <li><a href="certifications.html">Certifications</a></li>
+  <li><a href="clubs.html">Clubs</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">Community &amp; Leadership</p>
+  <h1 class="display reveal">Clubs &amp;<br><em>Organizations</em></h1>
+  <div class="rule-line reveal"></div>
+  <p class="lead reveal" style="margin-bottom:3.5rem;">Clubs and organizations I am part of at NIT Mizoram and beyond — roles, contributions, and moments from each.</p>
+
+  <div class="clubs-list">
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">NIT Mizoram</div>
+          <div class="club-name">Coding &amp; AI Club</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge">Team Head</span>
+          <span class="club-period">Feb 2025 &mdash; Present</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">
+          I lead the Website &amp; Social Media team of NIT Mizoram's Coding &amp; AI Club —
+          the primary technical community on campus. I manage digital presence, run workshops,
+          and mentor juniors across competitive programming and software development.
+        </p>
+                <div class="club-details">
+          <div class="club-detail-row">Building the official club website using HTML, CSS, JavaScript, and MySQL.</div>
+          <div class="club-detail-row">Conducting weekly workshops on <strong>DSA, Git, and competitive programming</strong> for 50+ students.</div>
+          <div class="club-detail-row">Mentoring 15+ students weekly on advanced DSA and founded a mentorship program — beginners to medium-difficulty CP in one semester.</div>
+          <div class="club-detail-row">Organizer & Problem Setter for the <strong>"Trishul" coding contest</strong> during TechnoX'25-26.</div>
+          <div class="club-detail-row">Managing all club branding, social media, event posters, and reels using Figma, Canva, Adobe Express, and CapCut.</div>
+        </div>
+        <div class="club-tags">
+          <span class="tag tag-accent">Team Head</span>
+          <span class="tag tag-accent">DSA Workshops</span>
+          <span class="tag tag-accent">Web Development</span>
+          <span class="tag">Mentorship</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Competitive Programming</span>
+        </div>
+      </div>
+    </div>
+
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">NIT Mizoram</div>
+          <div class="club-name">TechnoX'2025-26 Techfest</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge">Coordinator</span>
+          <span class="club-period">2026</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">Discord Server Handler & Coordinator for TechnoX'2025-26 Techfest, the annual technical festival of NIT Mizoram.</p>
+        <div class="club-details">
+          <div class="club-detail-row">Managed the official Discord server, coordinating events and communications across teams.</div>
+        </div>
+      </div>
+    </div>
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">NIT Mizoram</div>
+          <div class="club-name">Arthkriti — Business &amp; Finance Club</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge member">Member</span>
+          <span class="club-period">2025 &mdash; Present</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">
+          Member of Arthkriti, NIT Mizoram's Business and Finance Club — focused on developing
+          financial literacy, business acumen, and entrepreneurial thinking among engineering students.
+</p>
+                <div class="club-details">
+          <div class="club-detail-row">Building the official club website using HTML, CSS, JavaScript, and MySQL.</div>
+          <div class="club-detail-row">Conducting weekly workshops on <strong>DSA, Git, and competitive programming</strong> for 50+ students.</div>
+          <div class="club-detail-row">Mentoring 15+ students weekly on advanced DSA and founded a mentorship program — beginners to medium-difficulty CP in one semester.</div>
+          <div class="club-detail-row">Organizer & Problem Setter for the <strong>"Trishul" coding contest</strong> during TechnoX'25-26.</div>
+          <div class="club-detail-row">Managing all club branding, social media, event posters, and reels using Figma, Canva, Adobe Express, and CapCut.</div>
+        </div>
+        <div class="club-tags">
+          <span class="tag">Business</span>
+          <span class="tag">Finance</span>
+          <span class="tag">Entrepreneurship</span>
+        </div>
+      </div>
+    </div>
+
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">Google Developer Groups · NIT Mizoram</div>
+          <div class="club-name">GDG on Campus — NIT Mizoram</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge member">Member</span>
+          <span class="club-period">2025 &mdash; Present</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">
+          Member of the Google Developer Groups campus chapter at NIT Mizoram —
+          a community focused on Google technologies, open source development,
+          and technical skill-building through events, workshops, and hackathons.
+</p>
+                <div class="club-details">
+          <div class="club-detail-row">Building the official club website using HTML, CSS, JavaScript, and MySQL.</div>
+          <div class="club-detail-row">Conducting weekly workshops on <strong>DSA, Git, and competitive programming</strong> for 50+ students.</div>
+          <div class="club-detail-row">Mentoring 15+ students weekly on advanced DSA and founded a mentorship program — beginners to medium-difficulty CP in one semester.</div>
+          <div class="club-detail-row">Organizer & Problem Setter for the <strong>"Trishul" coding contest</strong> during TechnoX'25-26.</div>
+          <div class="club-detail-row">Managing all club branding, social media, event posters, and reels using Figma, Canva, Adobe Express, and CapCut.</div>
+        </div>
+        <div class="club-tags">
+          <span class="tag">Google Developer Groups</span>
+          <span class="tag">Open Source</span>
+          <span class="tag">Cloud</span>
+          <span class="tag">Android</span>
+        </div>
+      </div>
+    </div>
+
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">NIT Mizoram</div>
+          <div class="club-name">Think India</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge member">Member</span>
+          <span class="club-period">2025 &mdash; Present</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">
+          Member of Think India at NIT Mizoram — a national student organisation focused on
+          policy research, public discourse, leadership development, and civic engagement
+          among students across premier institutions in India.
+</p>
+                <div class="club-details">
+          <div class="club-detail-row">Building the official club website using HTML, CSS, JavaScript, and MySQL.</div>
+          <div class="club-detail-row">Conducting weekly workshops on <strong>DSA, Git, and competitive programming</strong> for 50+ students.</div>
+          <div class="club-detail-row">Mentoring 15+ students weekly on advanced DSA and founded a mentorship program — beginners to medium-difficulty CP in one semester.</div>
+          <div class="club-detail-row">Organizer & Problem Setter for the <strong>"Trishul" coding contest</strong> during TechnoX'25-26.</div>
+          <div class="club-detail-row">Managing all club branding, social media, event posters, and reels using Figma, Canva, Adobe Express, and CapCut.</div>
+        </div>
+        <div class="club-tags">
+          <span class="tag">Policy</span>
+          <span class="tag">Leadership</span>
+          <span class="tag">Civic Engagement</span>
+          <span class="tag">National Organisation</span>
+        </div>
+      </div>
+    </div>
+
+<div class="club-card reveal">
+      <div class="club-header">
+        <div>
+          <div class="club-org">NGO / Foundation</div>
+          <div class="club-name">JAD Foundation</div>
+        </div>
+        <div class="club-meta">
+          <span class="club-role-badge member">Member</span>
+          <span class="club-period">2025 &mdash; Present</span>
+        </div>
+      </div>
+      <div class="club-body">
+        <p class="club-desc">
+          Member of JAD Foundation — contributing to social initiatives and community outreach.
+</p>
+                <div class="club-details">
+          <div class="club-detail-row">Building the official club website using HTML, CSS, JavaScript, and MySQL.</div>
+          <div class="club-detail-row">Conducting weekly workshops on <strong>DSA, Git, and competitive programming</strong> for 50+ students.</div>
+          <div class="club-detail-row">Mentoring 15+ students weekly on advanced DSA and founded a mentorship program — beginners to medium-difficulty CP in one semester.</div>
+          <div class="club-detail-row">Organizer & Problem Setter for the <strong>"Trishul" coding contest</strong> during TechnoX'25-26.</div>
+          <div class="club-detail-row">Managing all club branding, social media, event posters, and reels using Figma, Canva, Adobe Express, and CapCut.</div>
+        </div>
+        <div class="club-tags">
+          <span class="tag">Foundation</span>
+          <span class="tag">Community</span>
+</div>
+      </div>
+    </div>
+
+</div>
+</div>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.05});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function openLightbox(slot) {
+    const img = slot.querySelector('img');
+    if (!img) return; // no image set yet — do nothing
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

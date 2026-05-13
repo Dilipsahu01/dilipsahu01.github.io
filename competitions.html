@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Competitions — Dilip Sahu</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+
+/* ─── HOW TO ADD MORE COMPETITIONS ────────────────────────────────────
+   HACKATHON / COLLEGE COMP:
+   Copy one entire .comp-card block and paste it in the right section.
+   Update these fields inside:
+     - comp-type-label  → e.g. "Hackathon" / "College Competition"
+     - comp-title       → Name of the competition
+     - comp-event       → Event / platform it was part of
+     - comp-date        → When it happened
+     - comp-result      → Your result badge (see badge types below)
+     - comp-desc        → 1-2 line description
+     - comp-detail-row  → Add/remove bullet points
+     - comp-tags        → Tech stack or relevant tags
+     - photo slots      → Add photos (same as clubs page)
+
+   RESULT BADGE TYPES — replace class on .comp-result:
+     badge-win      = green  (Winner / 1st place)
+     badge-done     = blue   (Participated / Completed)
+     badge-ongoing  = amber  (Ongoing / Runner-up)
+     badge-dev      = purple (Finalist / Special mention)
+──────────────────────────────────────────────────────────────────────── */
+
+/* ── Filter tabs ── */
+.filter-tabs {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.ftab {
+  font-family: var(--ff-sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .04em; padding: .45rem 1.1rem;
+  border-radius: 20px; border: 1.5px solid var(--rule-dark);
+  color: var(--muted); cursor: pointer; background: var(--surface);
+  transition: all .18s; text-decoration: none;
+}
+.ftab:hover  { border-color: var(--accent-line); color: var(--accent); background: var(--accent-lt); }
+.ftab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ── Stats strip ── */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); border-radius: var(--r);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  margin-bottom: 4rem;
+}
+.ss-cell {
+  background: var(--surface); padding: 1.5rem 1.8rem;
+  transition: background .18s;
+}
+.ss-cell:hover { background: var(--accent-lt); }
+.ss-val { font-family: var(--ff-serif); font-size: 2.2rem; font-weight: 600; color: var(--ink); line-height: 1; display: block; }
+.ss-lbl { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: .35rem; }
+
+/* ── Section divider label ── */
+.section-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 3rem 0 2rem;
+}
+.section-divider-line { flex: 1; height: 1px; background: var(--rule); }
+.section-divider-label {
+  font-family: var(--ff-sans); font-size: .65rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ── Competition card ── */
+.comp-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.comp-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow .22s, border-color .22s;
+  border-left: 3px solid transparent;
+}
+.comp-card:hover { box-shadow: var(--shadow-md); border-left-color: var(--accent-line); }
+
+.comp-header {
+  padding: 1.6rem 2rem 1.3rem;
+  border-bottom: 1px solid var(--rule);
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 1rem; align-items: start;
+}
+.comp-type-label {
+  font-size: .62rem; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--accent-mid); margin-bottom: .35rem;
+}
+.comp-title {
+  font-family: var(--ff-serif);
+  font-size: 1.25rem; font-weight: 600; color: var(--ink);
+  letter-spacing: -.01em; line-height: 1.2;
+}
+.comp-event {
+  font-size: .78rem; color: var(--muted); margin-top: .25rem;
+}
+.comp-right { display: flex; flex-direction: column; gap: .45rem; align-items: flex-end; }
+.comp-date { font-size: .72rem; color: var(--muted); white-space: nowrap; }
+
+/* Win badge — special green star style */
+.badge-win { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+
+.comp-body { padding: 1.5rem 2rem 1.8rem; }
+.comp-desc {
+  font-size: .9rem; color: var(--body-c); line-height: 1.8;
+  margin-bottom: 1.2rem; max-width: 700px;
+}
+.comp-details { margin-bottom: 1.2rem; }
+.comp-detail-row {
+  display: flex; gap: .75rem; align-items: flex-start;
+  padding: .38rem 0; border-bottom: 1px solid var(--rule);
+  font-size: .85rem; color: var(--body-c); line-height: 1.65;
+}
+.comp-detail-row:last-child { border-bottom: none; }
+.comp-detail-row::before {
+  content: ''; flex-shrink: 0;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent-line); margin-top: .6rem;
+}
+.comp-detail-row strong { color: var(--ink); font-weight: 600; }
+.comp-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.4rem; }
+
+/* Photo grid (same as clubs) */
+.photo-section-label {
+  font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: .9rem;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+  gap: .75rem;
+}
+.photo-slot {
+  aspect-ratio: 4/3; border-radius: 6px; overflow: hidden;
+  background: var(--bg); border: 1px solid var(--rule); position: relative;
+}
+.photo-slot img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .3s ease; }
+.photo-slot:hover img { transform: scale(1.04); }
+.photo-placeholder {
+  width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color: var(--muted); font-size:.72rem; text-align:center; padding:.5rem; gap:.4rem;
+}
+.photo-placeholder .ph-icon {
+  width:28px; height:28px; border:1.5px dashed var(--rule-dark); border-radius:4px;
+  display:flex; align-items:center; justify-content:center; font-size:.8rem; color:var(--rule-dark);
+}
+.photo-placeholder .ph-text { line-height:1.4; color:var(--muted); font-size:.68rem; }
+
+/* Lightbox */
+.lightbox { display:none; position:fixed; inset:0; background:rgba(22,22,26,.88); z-index:999; align-items:center; justify-content:center; }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:90vw; max-height:88vh; border-radius:6px; object-fit:contain; }
+.lightbox-close { position:absolute; top:1.2rem; right:1.5rem; font-size:1.8rem; color:#fff; cursor:pointer; opacity:.7; }
+.lightbox-close:hover { opacity:1; }
+
+@media (max-width: 640px) {
+  .comp-header { grid-template-columns: 1fr; }
+  .comp-right { align-items: flex-start; }
+  .comp-body { padding: 1.2rem 1.4rem 1.4rem; }
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+    <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="projects.html">Projects</a></li>
+  <li><a href="competitions.html">Competitions</a></li>
+  <li><a href="certifications.html">Certifications</a></li>
+  <li><a href="clubs.html">Clubs</a></li>
+  <li><a href="research.html">Research</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+  </div>
+</nav>
+
+<div class="page">
+  <p class="eyebrow reveal">Track Record</p>
+  <h1 class="display reveal">Competitions<br>&amp; <em>Hackathons</em></h1>
+  <div class="rule-line reveal"></div>
+  <p class="lead reveal" style="margin-bottom:3rem;">Hackathons, college competitions, and technical contests I have participated in.</p>
+<div class="stats-strip reveal">
+    <div class="ss-cell">
+      <span class="ss-val">5</span>
+      <div class="ss-lbl">Competitions</div>
+    </div>
+    <div class="ss-cell">
+      <span class="ss-val">1</span>
+      <div class="ss-lbl">Hackathons</div>
+    </div>
+    <div class="ss-cell">
+      <span class="ss-val">3</span>
+      <div class="ss-lbl">Wins / Podiums</div>
+    </div>
+    <div class="ss-cell">
+      <span class="ss-val">2</span>
+      <div class="ss-lbl">College Comps</div>
+    </div>
+  </div>
+<div class="filter-tabs reveal">
+    <span class="ftab active" onclick="filterCards('all',this)">All</span>
+    <span class="ftab" onclick="filterCards('hackathon',this)">Hackathons</span>
+    <span class="ftab" onclick="filterCards('college',this)">College Competitions</span>
+    <span class="ftab" onclick="filterCards('online',this)">Online Contests</span>
+  </div>
+
+  <div class="comp-list" id="compList">
+<div class="section-divider reveal">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Hackathons</div>
+      <div class="section-divider-line"></div>
+    </div>
+<div class="comp-card reveal" data-category="hackathon">
+      <div class="comp-header">
+        <div>
+          <div class="comp-type-label">Hackathon</div>
+          <div class="comp-title">ARTHKRITI AI Hackathon</div>
+          <div class="comp-event">NIT Mizoram</div>
+        </div>
+        <div class="comp-right">
+          <span class="comp-date">2026</span>
+          <span class="badge badge-win">🥇 1st Place</span>
+        </div>
+      </div>
+      <div class="comp-body">
+        <p class="comp-desc">
+          Built TourAI, an intelligent RAG-powered travel planning application that forecasts inflation-adjusted future trip costs and generates Claude-powered itineraries.
+        </p>
+        <div class="comp-details">
+          <div class="comp-detail-row">Implemented a 6-module ML pipeline integrating Prophet and Random Forest for financial feasibility and savings plans.</div>
+          <div class="comp-detail-row">Deployed full Docker Compose stack with MySQL, FastAPI, and Nginx-served React.</div>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-accent">FastAPI</span>
+          <span class="tag tag-accent">React 18</span>
+          <span class="tag">Meta Prophet</span>
+          <span class="tag">RAG</span>
+          <span class="tag">Claude LLM</span>
+        </div>
+      </div>
+    </div>
+
+<div class="section-divider reveal" style="margin-top:2rem;">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">College Competitions</div>
+      <div class="section-divider-line"></div>
+    </div>
+<div class="comp-card reveal" data-category="college">
+      <div class="comp-header">
+        <div>
+          <div class="comp-type-label">College Competition</div>
+          <div class="comp-title">DSA Problem Solving Challenge</div>
+          <div class="comp-event">Coding &amp; AI Club · NIT Mizoram</div>
+        </div>
+        <div class="comp-right">
+          <span class="comp-date">2025</span>
+          <span class="badge badge-win">1st Place</span>
+        </div>
+      </div>
+      <div class="comp-body">
+        <p class="comp-desc">
+          Ranked first out of all club participants in the intra-club competitive DSA challenge
+          organized by the Coding &amp; AI Club, NIT Mizoram.
+        </p>
+        <div class="comp-details">
+          <div class="comp-detail-row">Solved a series of algorithmic problems under time constraints covering topics across Data Structures and Algorithms.</div>
+          <div class="comp-detail-row"><strong>Result:</strong> 1st Place — highest score among all participants.</div>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-accent">DSA</span>
+          <span class="tag tag-accent">Competitive Programming</span>
+          <span class="tag">Algorithms</span>
+        </div>
+      </div>
+    </div>
+
+<div class="comp-card reveal" data-category="college">
+      <div class="comp-header">
+        <div>
+          <div class="comp-type-label">College Competition</div>
+          <div class="comp-title">Club Logo Design Competition</div>
+          <div class="comp-event">Coding &amp; AI Club · NIT Mizoram</div>
+        </div>
+        <div class="comp-right">
+          <span class="comp-date">2025</span>
+          <span class="badge badge-win">1st Place</span>
+        </div>
+      </div>
+      <div class="comp-body">
+        <p class="comp-desc">
+          Designed the winning logo for the Coding &amp; AI Club, NIT Mizoram.
+          The design was selected from all submissions and officially adopted as the club's identity.
+        </p>
+        <div class="comp-details">
+          <div class="comp-detail-row">Created logo concept and final design using Figma and Adobe Express.</div>
+          <div class="comp-detail-row"><strong>Result:</strong> 1st Place — design adopted as the official Coding &amp; AI Club logo.</div>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-accent">Figma</span>
+          <span class="tag tag-accent">Design</span>
+          <span class="tag">Adobe Express</span>
+          <span class="tag">Branding</span>
+        </div>
+      </div>
+    </div>
+
+<div class="section-divider reveal" style="margin-top:2rem;">
+      <div class="section-divider-line"></div>
+      <div class="section-divider-label">Online Contests</div>
+      <div class="section-divider-line"></div>
+    </div>
+<div class="comp-card reveal" data-category="online">
+      <div class="comp-header">
+        <div>
+          <div class="comp-type-label">Online Contest</div>
+          <div class="comp-title">60-Day Problem of the Day Challenge</div>
+          <div class="comp-event">GeeksforGeeks · NPCI Edition</div>
+        </div>
+        <div class="comp-right">
+          <span class="comp-date">Ongoing</span>
+          <span class="badge badge-ongoing">Active</span>
+        </div>
+      </div>
+      <div class="comp-body">
+        <p class="comp-desc">
+          Actively participating in the GeeksforGeeks 60-Day POTD (Problem of the Day) Challenge,
+          NPCI Edition — solving one curated DSA problem every day for 60 consecutive days.
+        </p>
+        <div class="comp-details">
+          <div class="comp-detail-row">Consistent daily problem-solving streak across varied DSA topics and difficulty levels.</div>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-accent">DSA</span>
+          <span class="tag">GeeksforGeeks</span>
+          <span class="tag">Daily Streak</span>
+          <span class="tag">NPCI</span>
+        </div>
+      </div>
+    </div>
+<div class="comp-card reveal" data-category="online">
+      <div class="comp-header">
+        <div>
+          <div class="comp-type-label">Online Contest</div>
+          <div class="comp-title">Kaggle Deep Past Challenge: Akkadian-to-English NLP Translation</div>
+          <div class="comp-event">Kaggle</div>
+        </div>
+        <div class="comp-right">
+          <span class="comp-date">2025</span>
+          <span class="badge badge-done">Top 48%</span>
+        </div>
+      </div>
+      <div class="comp-body">
+        <p class="comp-desc">Competed globally in the Kaggle deep-past-initiative challenge, building ML translation models for the ancient Akkadian language.</p>
+        <div class="comp-details">
+          <div class="comp-detail-row">Achieved a score of 33.3263 vs top score 42.8957.</div>
+          <div class="comp-detail-row">Ranked 1288 out of 2700+ global teams in the Seq-to-Seq challenge.</div>
+        </div>
+        <div class="comp-tags">
+          <span class="tag tag-accent">NLP</span>
+          <span class="tag">Kaggle</span>
+          <span class="tag">Seq2Seq</span>
+          <span class="tag">Machine Translation</span>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt=""/>
+</div>
+
+<footer>
+  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+</footer>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.05});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Filter
+  function filterCards(cat, el) {
+    document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.comp-card').forEach(c => {
+      if (cat === 'all' || c.dataset.category === cat) {
+        c.style.display = '';
+      } else {
+        c.style.display = 'none';
+      }
+    });
+  }
+
+  // Lightbox
+  function openLightbox(slot) {
+    const img = slot.querySelector('img');
+    if (!img) return;
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
