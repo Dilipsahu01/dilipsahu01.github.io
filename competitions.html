@@ -260,19 +260,19 @@
   <p class="lead reveal" style="margin-bottom:3rem;">Hackathons, college competitions, and technical contests I have participated in.</p>
 <div class="stats-strip reveal">
     <div class="ss-cell">
-      <span class="ss-val">5</span>
+      <span class="ss-val">7</span>
       <div class="ss-lbl">Competitions</div>
     </div>
     <div class="ss-cell">
-      <span class="ss-val">1</span>
+      <span class="ss-val">2</span>
       <div class="ss-lbl">Hackathons</div>
     </div>
     <div class="ss-cell">
-      <span class="ss-val">3</span>
+      <span class="ss-val">4</span>
       <div class="ss-lbl">Wins / Podiums</div>
     </div>
     <div class="ss-cell">
-      <span class="ss-val">2</span>
+      <span class="ss-val">3</span>
       <div class="ss-lbl">College Comps</div>
     </div>
   </div>
@@ -526,6 +526,9 @@
       } else {
         c.style.display = 'none';
       }
+    });
+    document.querySelectorAll('.section-divider').forEach(d => {
+      d.style.display = cat === 'all' ? '' : 'none';
     });
   }
 

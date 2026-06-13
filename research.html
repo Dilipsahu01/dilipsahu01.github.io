@@ -34,8 +34,7 @@
   .research-list { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); }
   .ri {
     background: var(--surface); padding: 1.5rem 1.8rem;
-    transition: background .18s; border-left: 3px solid transparent;
-    transition: background .18s, border-color .18s;
+    transition: background .18s, border-color .18s; border-left: 3px solid transparent;
   }
   .ri:hover { background: var(--accent-lt); border-left-color: var(--accent-line); }
   .ri-title {
@@ -53,7 +52,7 @@
     position: relative;
     transition: background .18s;
   }
-  .idea:hover { background: #fafaf8; }
+  .idea:hover { background: var(--accent-lt); }
   .idea-stage-badge {
     font-size: .58rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
     padding: .18rem .58rem; border-radius: 3px; position: absolute; top: 1.3rem; right: 1.5rem;
