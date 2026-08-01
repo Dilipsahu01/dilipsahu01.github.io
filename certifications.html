@@ -193,15 +193,11 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
     <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="competitions.html">Competitions</a></li>
-  <li><a href="certifications.html">Certifications</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="research.html">Research</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="competitions.html">Credentials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
@@ -424,9 +420,8 @@
   <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
 </footer>
 
+<script type="module" src="animations.js"></script>
 <script>
-  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.06});
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
   // Smooth-scroll tabs
   const tabs = document.querySelectorAll('.sec-tab');

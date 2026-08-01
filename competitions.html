@@ -22,7 +22,7 @@
 <meta property="twitter:title" content="Competitions — Dilip Sahu" />
 <meta property="twitter:description" content="Competitions and hackathons participated by Dilip Sahu, a computer science engineering student." />
 
-<title>Competitions — Dilip Sahu</title>
+<title>Credentials — Dilip Sahu</title>
 <link rel="stylesheet" href="style.css"/>
 <style>
 
@@ -241,23 +241,19 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
     <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="competitions.html">Competitions</a></li>
-  <li><a href="certifications.html">Certifications</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="research.html">Research</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="competitions.html" class="active">Credentials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
 <div class="page">
   <p class="eyebrow reveal">Track Record</p>
-  <h1 class="display reveal">Competitions<br>&amp; <em>Hackathons</em></h1>
+  <h1 class="display reveal">Credentials<br>&amp; <em>Achievements</em></h1>
   <div class="rule-line reveal"></div>
-  <p class="lead reveal" style="margin-bottom:3rem;">Hackathons, college competitions, and technical contests I have participated in.</p>
+  <p class="lead reveal" style="margin-bottom:3rem;">Hackathons, competitions, certifications, and recognition. Also see <a href="certifications.html" style="color:var(--accent-mid);">detailed certifications →</a></p>
 <div class="stats-strip reveal">
     <div class="ss-cell">
       <span class="ss-val">7</span>
@@ -541,10 +537,8 @@
   <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
 </footer>
 
+<script type="module" src="animations.js"></script>
 <script>
-  // Scroll reveal
-  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.05});
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
   // Filter
   function filterCards(cat, el) {

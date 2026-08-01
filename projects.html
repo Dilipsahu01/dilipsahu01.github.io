@@ -1,456 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="Explore projects by Dilip Sahu, including IoT bus trackers, AI integrations, scalable backends, and more."/>
-<meta name="keywords" content="Dilip Sahu Projects, IoT, Backend, AI, Machine Learning, Web Development, Portfolio"/>
-<meta name="author" content="Dilip Sahu"/>
-<link rel="canonical" href="https://dilipsahu01.github.io/projects.html"/>
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dilipsahu01.github.io/projects.html" />
-<meta property="og:title" content="Projects — Dilip Sahu" />
-<meta property="og:description" content="Explore projects by Dilip Sahu, including IoT bus trackers, AI integrations, scalable backends, and more." />
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://dilipsahu01.github.io/projects.html" />
-<meta property="twitter:title" content="Projects — Dilip Sahu" />
-<meta property="twitter:description" content="Explore projects by Dilip Sahu, including IoT bus trackers, AI integrations, scalable backends, and more." />
-
-<title>Projects — Dilip Sahu</title>
-<link rel="stylesheet" href="style.css"/>
-<style>
-  .project-list { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); margin-bottom: 5rem; }
-  .project-row {
-    background: var(--surface);
-    padding: 2.2rem 2.5rem;
-    transition: background .18s;
-    cursor: default;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Dilip Sahu</title>
+  <meta name="description" content="Engineering challenges solved by Dilip Sahu, featuring real-time AI, full-stack RAG, IoT telemetry, and core CS projects.">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dilip Sahu",
+      "jobTitle": "Software Engineer",
+      "url": "https://dilipsahu01.github.io/"
+    }
   }
-  .project-row:hover { background: #fafaf8; }
-
-  .pr-top {
-    display: flex; align-items: flex-start; justify-content: space-between;
-    gap: 1rem; margin-bottom: .9rem; flex-wrap: wrap;
-  }
-  .pr-meta {
-    font-size: .67rem; font-weight: 600; letter-spacing: .1em;
-    text-transform: uppercase; color: var(--muted); margin-bottom: .35rem;
-  }
-  .pr-title {
-    font-family: var(--ff-serif);
-    font-size: 1.35rem; font-weight: 600; color: var(--ink);
-    letter-spacing: -.01em; line-height: 1.2;
-  }
-  .pr-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .9rem 0; }
-  .pr-points { list-style: none; }
-  .pr-points li {
-    font-size: .88rem; color: var(--body-c); line-height: 1.72;
-    padding: .45rem 0; border-bottom: 1px solid var(--rule);
-    display: flex; gap: .8rem; align-items: flex-start;
-  }
-  .pr-points li:last-child { border-bottom: none; }
-  .pr-points li::before {
-    content: ''; flex-shrink: 0;
-    width: 4px; height: 4px; border-radius: 50%;
-    background: var(--accent-line);
-    margin-top: .68rem;
-  }
-  .pr-points li strong { color: var(--ink); font-weight: 600; }
-
-  /* OSS */
-  .oss-wrap { border-top: 1px solid var(--rule); padding-top: 4rem; }
-  .oss-card {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-left: 3px solid var(--accent-line);
-    border-radius: var(--r);
-    padding: 2rem 2.5rem;
-    box-shadow: var(--shadow-xs);
-  }
-  .oss-meta {
-    font-size: .65rem; font-weight: 700; letter-spacing: .12em;
-    text-transform: uppercase; color: var(--accent-mid); margin-bottom: .4rem;
-  }
-  .oss-title {
-    font-family: var(--ff-serif);
-    font-size: 1.3rem; font-weight: 600; color: var(--ink);
-    margin-bottom: .9rem; letter-spacing: -.01em;
-  }
-  .oss-desc { font-size: .9rem; color: var(--body-c); line-height: 1.8; }
-</style>
-<!-- Structured Data for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Dilip Sahu",
-  "url": "https://dilipsahu01.github.io/",
-  "jobTitle": "Software Engineer | Backend Engineering | AI Systems | Distributed Systems",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "NIT Mizoram"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "National Institute of Technology (NIT), Mizoram"
-  },
-  "sameAs": [
-    "https://github.com/Dilipsahu01",
-    "https://linkedin.com/in/dilip-sahu-7b8789324"
-  ],
-  "knowsAbout": [
-    "IoT Systems",
-    "Scalable Backends",
-    "Applied Machine Learning",
-    "Post-Quantum Cryptography",
-    "Binary Neural Networks",
-    "C++", "Python", "Java", "Edge AI",
-    "Artificial Intelligence",
-    "Firmware Security"
-  ],
-  "email": "dilipsahu01022006@gmail.com",
-  "description": "2nd-year B.Tech CSE student at NIT Mizoram specializing in IoT Systems, Scalable Backends, and Applied ML."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://dilipsahu01.github.io/",
-  "name": "Dilip Sahu Portfolio",
-  "author": {
-    "@type": "Person",
-    "name": "Dilip Sahu"
-  }
-}
-</script>
+  </script>
 </head>
 <body>
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
-    <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="competitions.html">Competitions</a></li>
-  <li><a href="certifications.html">Certifications</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="research.html">Research</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-  </div>
-</nav>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="competitions.html">Credentials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="page">
-  <p class="eyebrow reveal">Portfolio</p>
-  <h1 class="display reveal"><em>Projects</em></h1>
-  <div class="rule-line reveal"></div>
-  <p class="lead reveal" style="margin-bottom:3.5rem;">All core logic built from scratch. No high-level framework shortcuts — each project reflects a problem I wanted to genuinely understand.</p>
+  <div class="page">
+    <p class="eyebrow reveal">Portfolio</p>
+    <h1 class="display reveal">Engineering Challenges <em>Solved</em></h1>
+    <div class="rule-line reveal"></div>
+    <p class="lead reveal" style="margin-bottom:3rem;">Systems I designed and built from scratch — framed as engineering problems, not feature lists.</p>
 
-  <div class="project-list">
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Web Utility &middot; 2026</div>
-          <div class="pr-title">File Compressor Pro 
-            <a href="https://digitalheroesco.com/" target="_blank" rel="noopener" class="btn" style="font-size:0.85rem; margin-left:12px; padding: 0.35rem 0.85rem; border-radius: 6px; vertical-align: middle; display: inline-flex; align-items: center; background: var(--accent-lt); color: var(--accent-mid); border: 1.5px solid var(--accent-line); font-weight: 700; box-shadow: var(--shadow-xs); text-decoration: none;">built for DigitalHeros</a>
+    <div>
+      
+      <!-- Project 1 -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">01</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">
+              <a href="https://github.com/Dilipsahu01/CyberGuard_AI_Application" target="_blank" rel="noopener noreferrer">CyberGuard AI — Real-Time Edge AI Scam Detection</a>
+            </h2>
+            <div class="challenge-meta">
+              <span>National Finalist · ₹1,00,000 Seed Funding · DoT 5G Innovation Hackathon</span>
+              <span class="badge badge-win">National Finalist</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--problem">Challenge</span>
+            <p class="challenge-text">Build a real-time scam detection system that runs entirely on-device with no cloud dependency, preserving user privacy on Android smartphones.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--approach">Approach</span>
+            <p class="challenge-text">Engineered an offline inference pipeline integrating Silero VAD and Sherpa-ONNX Fast Conformer. Built end-to-end detection using Kotlin Coroutines, JNI, and ONNX Runtime. Developed a lightweight Go telemetry backend for risk scores.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--outcome">Outcome</span>
+            <p class="challenge-text">17ms inference latency, 48K audio samples every 3 seconds, 145 MB memory budget. Recognized as National Finalist (Top 50) in DoT 5G Innovation Hackathon, awarded ₹1,00,000 seed funding.</p>
+          </div>
+          <div class="challenge-tags">
+            <span class="tag tag-accent">Kotlin</span>
+            <span class="tag">Go</span>
+            <span class="tag">ONNX Runtime</span>
+            <span class="tag">Android</span>
+            <span class="tag">JNI</span>
           </div>
         </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">HTML5 / CSS3</span>
-        <span class="tag tag-accent">Vanilla JS (ES6)</span>
-        <span class="tag tag-accent">Web Workers</span>
-        <span class="tag tag-accent">PDF.js</span>
-        <span class="tag tag-accent">jsPDF</span>
-        <span class="tag tag-accent">heic2any</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> A high-performance, privacy-first, 100% client-side file compression web application designed to run entirely in the browser. Compress JPEGs, PNGs, WEBP, HEIC images, and PDFs to target limits (e.g. 50KB, 100KB) quickly and safely.</li>
-        <li><strong>Hardware-Aware Concurrency Control:</strong> Automatically detects and leverages multiple CPU cores using Web Workers for ultra-fast multi-file batch processing. Includes a dynamic, load-aware concurrency control slider.</li>
-        <li><strong>Asynchronous Task Queue:</strong> Buffers large file batches to prevent browser memory spikes and tab crashes.</li>
-        <li><strong>Multi-Format Support:</strong> Handles JPEG, PNG, WEBP, Apple HEIC, and multi-page PDF documents.</li>
-        <li><strong>Smart PDF Downscaling:</strong> Decouples physical layouts from rendering resolutions to compress PDFs without changing physical page boundaries. Paints solid white backgrounds to remove transparency blackout artifacts in JPEGs.</li>
-        <li><strong>Two-Pass Compression for PDFs:</strong> Squeezes PDFs to a high-quality readable limit (minimum 500px and 0.5 quality) in the first pass, and enables a "Force to Target" option to override readability and forcefully compress the file to the strict target limit.</li>
-        <li><strong>Zero Server-Side Handling:</strong> All conversions and compressions happen inside the browser client. Your data never leaves your device.</li>
-      </ul>
-    </div>
+      </article>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Core Security</div>
-          <div class="pr-title">Custom Cryptographic Engine &amp; Firmware Security</div>
+      <!-- Project 2 -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">02</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">
+              <a href="https://github.com/Dilipsahu01/document-intelligence-plateform" target="_blank" rel="noopener noreferrer">Document Intelligence Platform</a>
+            </h2>
+            <div class="challenge-meta">
+              <span>Full-Stack RAG · Privacy-First</span>
+              <span class="badge badge-done">Completed</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--problem">Challenge</span>
+            <p class="challenge-text">Turn unstructured book data into searchable AI-powered knowledge without relying on any cloud AI APIs.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--approach">Approach</span>
+            <p class="challenge-text">Selenium scraper &rarr; Django REST backend &rarr; ChromaDB vector store + MySQL relational metadata &rarr; Local LLM via LM Studio &rarr; Next.js frontend. Why ChromaDB: needed a vector database that could run locally alongside the LLM for zero-cloud-dependency semantic search.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--outcome">Outcome</span>
+            <p class="challenge-text">Full RAG ecosystem with semantic search, automated summaries, and genre classification &mdash; all running locally with zero cloud AI calls.</p>
+          </div>
+          <div class="challenge-tags">
+            <span class="tag tag-accent">Next.js</span>
+            <span class="tag">Django REST</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Selenium</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LM Studio</span>
+          </div>
         </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">C / Python</span>
-        <span class="tag tag-accent">AES / DES / RSA</span>
-        <span class="tag tag-accent">SHA-256</span>
-        <span class="tag">IoT Security</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Engineered custom implementations of AES, DES, and RSA from scratch in C and Python, demonstrating a deep understanding of core cryptographic primitives and bit-level data manipulation.</li>
-        <li>Developed secure cryptographic hashing utilities, including SHA-256 and digital signature verification protocols, strictly utilizing standard libraries to ensure mathematical accuracy.</li>
-        <li>Designed firmware architectures resilient to physical vulnerabilities, implementing defensive strategies against side-channel attacks and fault injection for embedded microcontrollers.</li>
-        <li>Secured real-time data transmission for hardware modules by integrating custom lightweight encryption and device authentication protocols.</li>
-      </ul>
-    </div>
+      </article>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Virtual Experience &middot; Mar 2026</div>
-          <div class="pr-title">Software Engineering Simulation <a href="#" style="font-size:0.8rem; margin-left:10px; color:var(--muted); text-decoration:none; cursor:default;">[JPMorgan Chase & Co.]</a></div>
+      <!-- Project 3 -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">03</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">AI Candidate Ranking Pipeline</h2>
+            <div class="challenge-meta">
+              <span>AI Engineering · CPU-Only</span>
+              <span class="badge badge-done">Completed</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--problem">Challenge</span>
+            <p class="challenge-text">Rank 100K+ JSON resumes in under 5 minutes on CPU-only hardware without external APIs or GPU acceleration.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--approach">Approach</span>
+            <p class="challenge-text">Three-stage funnel pipeline &mdash; vectorized Pandas filtering &rarr; BM25 lexical retrieval &rarr; all-MiniLM-L6-v2 semantic similarity. Each stage progressively narrows the candidate pool so the expensive embedding computation only runs on pre-filtered candidates.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--outcome">Outcome</span>
+            <p class="challenge-text">Processes 100K+ resumes in &lt;5 minutes. Zero GPU, zero API costs. Deployed with Gradio UI.</p>
+          </div>
+          <div class="challenge-tags">
+            <span class="tag tag-accent">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Sentence Transformers</span>
+            <span class="tag">BM25</span>
+            <span class="tag">Gradio</span>
+          </div>
         </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Apache Kafka</span>
-        <span class="tag tag-accent">H2 DB</span>
-        <span class="tag tag-accent">Java</span>
-        <span class="tag">Real-Time Data</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Engineered a real-time data visualizer using Apache Kafka and H2 DB during a virtual engineering simulation by Forage.</li>
-        <li>Achieved sub-10ms response latency for high-frequency live data ingestion flows.</li>
-      </ul>
-    </div>
+      </article>
 
-    
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Arthkriti AI Finance Hackathon 2026 Winner</div>
-          <div class="pr-title">TourAI — AI Travel &amp; Financial Planning Platform <a href="https://github.com/Dilipsahu01/tourai_project" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+      <!-- Project 4 -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">04</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">
+              <a href="https://github.com/Dilipsahu01/nitmz-bus-tracker" target="_blank" rel="noopener noreferrer">Live Campus Transit & Telemetry Platform</a>
+            </h2>
+            <div class="challenge-meta">
+              <span>IoT & Firmware · Active Deployment</span>
+              <span class="badge badge-live">Active</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--problem">Challenge</span>
+            <p class="challenge-text">Provide reliable real-time bus location on a campus with unreliable cellular connectivity and no existing infrastructure.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--approach">Approach</span>
+            <p class="challenge-text">ESP32 firmware with SIM800L GSM + Wi-Fi dual failover. HTTPS telemetry with secure API-key authentication. Flask backend with PostgreSQL. Buffered telemetry to handle network drops.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--outcome">Outcome</span>
+            <p class="challenge-text">Secure API-key auth, one-second GPS updates, automatic GSM/Wi-Fi failover. Operational on campus.</p>
+          </div>
+          <div class="challenge-tags">
+            <span class="tag tag-accent">ESP32</span>
+            <span class="tag">Flask</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">SIM800L</span>
+          </div>
         </div>
-        <span class="badge badge-done">🥇 1st Place</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">FastAPI</span>
-        <span class="tag tag-accent">React</span>
-        <span class="tag tag-accent">MySQL</span>
-        <span class="tag">Docker</span>
-        <span class="tag">Claude API</span>
-        <span class="tag">Prophet</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> AI travel planner that forecasts inflation-adjusted future trip costs, checks financial feasibility, generates savings plans, and orchestrates LLM itineraries.</li>
-        <li>Built a 15-year economic dataset from 2,000+ government records.</li>
-        <li>Trained forecasting models achieving below 4% MAPE.</li>
-        <li>Architected an asynchronous FastAPI backend integrating ML inference and LLM orchestration.</li>
-      </ul>
-    </div>
+      </article>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">IoT & Firmware</div>
-          <div class="pr-title">Live Campus Transit &amp; Telemetry Platform <a href="https://github.com/Dilipsahu01/nitmz-bus-tracker" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+      <!-- Project 5 -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">05</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">
+              <a href="https://github.com/Dilipsahu01/JavaDigitRecognizer" target="_blank" rel="noopener noreferrer">Handwritten Digit Recognition — Neural Network from Scratch</a>
+            </h2>
+            <div class="challenge-meta">
+              <span>Core CS · Zero Frameworks</span>
+              <span class="badge badge-done">Completed</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--problem">Challenge</span>
+            <p class="challenge-text">Understand neural networks at the mathematical level &mdash; no TensorFlow, no PyTorch, no frameworks whatsoever.</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--approach">Approach</span>
+            <p class="challenge-text">784&rarr;128&rarr;10 feedforward network in pure Java. Manual backpropagation with primitive arrays. Xavier initialization, Sigmoid + Softmax activations. Independently derived 1-bit quantization concept (pixel binarization: /255 &rarr; threshold 0.3 &rarr; binary).</p>
+          </div>
+          <div class="challenge-section">
+            <span class="challenge-label challenge-label--outcome">Outcome</span>
+            <p class="challenge-text">96% accuracy on MNIST with 10K-sample training. Persistent weights via brain.dat serialization. Interactive 28&times;28 Java Swing drawing canvas.</p>
+          </div>
+          <div class="challenge-tags">
+            <span class="tag tag-accent">Core Java</span>
+            <span class="tag">Java Swing</span>
+            <span class="tag">MNIST</span>
+            <span class="tag">MVC Pattern</span>
+          </div>
         </div>
-        <span class="badge badge-live">Active</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">ESP32</span>
-        <span class="tag tag-accent">Flask</span>
-        <span class="tag tag-accent">PostgreSQL</span>
-        <span class="tag">SIM800L</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> End-to-end vehicle tracking platform using ESP32 firmware, HTTPS telemetry, and a Flask backend to provide real-time campus bus location updates.</li>
-        <li>Implemented secure API-key authentication, one-second GPS updates, GSM/Wi-Fi failover, and buffered telemetry to maintain reliable tracking under unstable network conditions.</li>
-      </ul>
-    </div>
+      </article>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Core CS</div>
-          <div class="pr-title">Java Digit Recognizer: Neural Network from Scratch <a href="https://github.com/Dilipsahu01/JavaDigitRecognizer" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
+      <!-- Open Source -->
+      <article class="challenge-card reveal">
+        <header class="challenge-header">
+          <div class="challenge-num">OS</div>
+          <div class="challenge-header-content">
+            <h2 class="challenge-title">OpenCV — Bug Investigation & Precision Fix</h2>
+            <div class="challenge-meta">
+              <span>C++ · Sep 2025 · PR Merged Upstream</span>
+              <span class="badge badge-win">Merged</span>
+            </div>
+          </div>
+        </header>
+        <div class="challenge-body">
+          <p class="challenge-text">Diagnosed a floating-point precision anomaly in OpenCV's Windows build caused by MinGW FPU extended-precision behavior; implemented strict double-precision semantics via PR.</p>
         </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Core Java (JDK 8+)</span>
-        <span class="tag tag-accent">Java Swing</span>
-        <span class="tag tag-accent">MNIST dataset</span>
-        <span class="tag">MVC pattern</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Professional desktop app implementing a 3-layer feedforward neural network in pure Java — zero ML frameworks — trained on MNIST with an interactive 28×28 drawing canvas.</li>
-        <li>Architecture: 784 input → 128 hidden (Sigmoid) → 10 output (Softmax); Xavier weight initialization. Manual backpropagation with Java primitive arrays; learning rate 0.05.</li>
-        <li>96% accuracy on 500 MNIST test images after 10,000-sample training.</li>
-        <li>Pixel binarization: normalize /255 → threshold 0.3 → binary 0/1 (independently derived 1-bit quantization concept).</li>
-        <li>Persistent weights via brain.dat serialization; thread-safe training via SwingWorker.</li>
-      </ul>
-    </div>
+      </article>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">National Finalist &middot; ₹1,00,000 Seed Funding</div>
-          <div class="pr-title">CyberGuard AI — Real-Time Edge AI Scam Detection <a href="https://github.com/Dilipsahu01/CyberGuard_AI_Application" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
-        </div>
-        <span class="badge badge-live">In Progress</span>
+      <div class="reveal" style="text-align: center; margin-top: 4rem; margin-bottom: 2rem;">
+        <a href="about.html" style="color: var(--accent-mid); font-family: 'Manrope', sans-serif; font-weight: 600; text-decoration: none;">View all projects including File Compressor Pro, Senior Care Platform, Sentiment Analysis, and more &rarr;</a>
       </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Kotlin</span>
-        <span class="tag tag-accent">Go</span>
-        <span class="tag tag-accent">ONNX Runtime</span>
-        <span class="tag">Android</span>
-        <span class="tag">JNI</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Engineered an offline Android inference pipeline integrating Silero VAD and Sherpa-ONNX Fast Conformer to perform real-time speech transcription without transmitting user audio to the cloud, preserving user privacy.</li>
-        <li>Built the end-to-end detection pipeline using Kotlin Coroutines, JNI, and ONNX Runtime to process 48K audio samples every three seconds with approximately 17 ms inference latency while operating within a 145 MB memory budget.</li>
-        <li>Developed a lightweight Go telemetry backend for receiving risk scores and diagnostic metadata from Android clients, supporting future 5G edge deployment; recognized as a National Finalist in the DoT 5G Innovation Hackathon (awarded ₹1,00,000 Seed Funding).</li>
-      </ul>
-    </div>
 
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">AI Engineering</div>
-          <div class="pr-title">AI Candidate Ranking Pipeline <a href="#" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
-        </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Python</span>
-        <span class="tag tag-accent">Pandas</span>
-        <span class="tag tag-accent">Sentence Transformers</span>
-        <span class="tag">BM25</span>
-        <span class="tag">Gradio</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Built a CPU-optimized candidate ranking engine that processed more than 100K JSON resumes in under five minutes without external APIs or GPU acceleration.</li>
-        <li>Designed a three-stage ranking pipeline combining vectorized Pandas filtering, BM25 lexical retrieval, and semantic similarity using the all-MiniLM-L6-v2 Sentence Transformer to rank candidates efficiently.</li>
-      </ul>
     </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Full-Stack AI</div>
-          <div class="pr-title">Document Intelligence Platform <a href="https://github.com/Dilipsahu01/document-intelligence-plateform" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
-        </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Next.js</span>
-        <span class="tag tag-accent">TypeScript</span>
-        <span class="tag tag-accent">Tailwind CSS</span>
-        <span class="tag">Django REST</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">ChromaDB</span>
-        <span class="tag">RAG</span>
-        <span class="tag">LM Studio</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Full-stack RAG ecosystem that turns unstructured book data into searchable, AI-powered knowledge with a privacy-first local LLM.</li>
-        <li>Automated Selenium scraper ingests and normalizes book data.</li>
-        <li>Dual-database: MySQL (relational metadata) + ChromaDB (vector embeddings).</li>
-        <li>Privacy-centric: local LLM via LM Studio — zero cloud AI calls. Features semantic search, automated summaries, genre classification.</li>
-      </ul>
-    </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Jan 2026 &mdash; May 2026</div>
-          <div class="pr-title">Secure Senior Care Management Platform <a href="https://github.com/Dilipsahu01/senior-care-portal" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
-        </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Flask</span>
-        <span class="tag tag-accent">PostgreSQL</span>
-        <span class="tag tag-accent">JavaScript</span>
-        <span class="tag">JWT</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Developed a secure full-stack care management platform with JWT authentication, role-based access control, REST APIs, and a normalized PostgreSQL database deployed on Vercel with Supabase.</li>
-      </ul>
-    </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Data Science</div>
-          <div class="pr-title">Hyperliquid × Bitcoin Sentiment Analysis <a href="https://github.com/Dilipsahu01/hyperliquid_sentiment_analysis" style="font-size:0.8rem; margin-left:10px;">[GitHub]</a></div>
-        </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Python</span>
-        <span class="tag tag-accent">Pandas</span>
-        <span class="tag tag-accent">NumPy</span>
-        <span class="tag">SciPy</span>
-        <span class="tag">scikit-learn</span>
-        <span class="tag">Statsmodels</span>
-        <span class="tag">Plotly</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Quantitative analysis of ~211K Hyperliquid perpetual futures trades merged with the Bitcoin Fear & Greed Index to study how sentiment regimes affect trader behavior.</li>
-        <li>Statistical tests: Kruskal-Wallis, Mann-Whitney, Spearman/Pearson correlations, VaR/CVaR.</li>
-        <li>17 auto-generated dark-theme charts + auto-rendered Markdown report. Built for Primetrade.ai Data Science Hiring Assignment.</li>
-      </ul>
-    </div>
-
-    <div class="project-row reveal">
-      <div class="pr-top">
-        <div>
-          <div class="pr-meta">Desktop App</div>
-          <div class="pr-title">Water Sort Studio Pro</div>
-        </div>
-        <span class="badge badge-done">Completed</span>
-      </div>
-      <div class="pr-tags">
-        <span class="tag tag-accent">Java</span>
-        <span class="tag tag-accent">Swing</span>
-        <span class="tag tag-accent">DFS/BFS</span>
-        <span class="tag">Pruning</span>
-        <span class="tag">Memoization</span>
-      </div>
-      <ul class="pr-points">
-        <li><strong>Description:</strong> Desktop puzzle solver for Water Sort puzzles using state-space graph search.</li>
-        <li>Solves 16-bottle worst-case in under 2 seconds via DFS/BFS + pruning + memoization.</li>
-        <li>Real-time step-by-step Swing GUI; MVC design pattern.</li>
-      </ul>
-    </div>
-
   </div>
 
-  <div class="oss-wrap">
-    <p class="eyebrow reveal">Open Source</p>
-    <h2 class="section-title reveal">Contributions</h2>
-    <div class="rule-line reveal"></div>
-    <div class="oss-card reveal">
-      <div class="oss-meta">C++ &middot; Sep 2025 &middot; Upstream Contributor</div>
-      <div class="oss-title">OpenCV — Bug Investigation &amp; Precision Fix</div>
-      <p class="oss-desc">Diagnosed a floating-point precision anomaly in OpenCV's Windows build caused by MinGW FPU extended-precision behavior; implemented strict double-precision semantics via PR.</p>
-    </div>
-  </div>
-</div>
+  <footer>
+    <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
+    <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
+  </footer>
 
-<footer>
-  <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
-  <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
-</footer>
-
-<script>
-  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.06});
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
+  <script type="module" src="animations.js"></script>
 </body>
 </html>

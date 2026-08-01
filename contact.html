@@ -136,7 +136,7 @@
   "@type": "Person",
   "name": "Dilip Sahu",
   "url": "https://dilipsahu01.github.io/",
-  "jobTitle": "Software Engineer & AI Developer",
+  "jobTitle": "Software Engineer | Backend Engineering | AI Systems | Distributed Systems",
   "worksFor": {
     "@type": "Organization",
     "name": "NIT Mizoram"
@@ -181,14 +181,10 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
     <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="competitions.html">Competitions</a></li>
-  <li><a href="certifications.html">Certifications</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="research.html">Research</a></li>
-  <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="competitions.html">Credentials</a></li>
+      <li><a href="contact.html">Contact</a></li>
 </ul>
   </div>
 </nav>
@@ -263,6 +259,7 @@
           <select id="subjectSelect">
             <option value="">Select a topic...</option>
             <option value="Internship Opportunity">Internship Opportunity</option>
+            <option value="Freelance Inquiry">Freelance Inquiry</option>
             <option value="Research Collaboration">Research Collaboration</option>
             <option value="Open Source">Open Source / Contribution</option>
             <option value="Project Discussion">Project Discussion</option>
@@ -289,9 +286,8 @@
   <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
 </footer>
 
+<script type="module" src="animations.js"></script>
 <script>
-  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.07});
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
   function handleSend() {
     const name    = document.getElementById('senderName').value.trim();

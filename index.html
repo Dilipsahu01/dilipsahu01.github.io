@@ -6,139 +6,27 @@
 <meta name="google-site-verification" content="4dNqM0TtEb4A7aOFB2MSkUmbGQDNgp_LQh-ML7iVqJw" />
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="Dilip Sahu - B.Tech CSE student at NIT Mizoram, specializing in IoT Systems, Scalable Backends, and Applied ML. Explore my portfolio, projects, and research."/>
-<meta name="keywords" content="Dilip Sahu, NIT Mizoram, CSE, Software Engineer, Portfolio, IoT, Machine Learning, C++, Python, Web Development"/>
+<meta name="description" content="Dilip Sahu — Software Engineer specializing in Distributed Systems, Backend Engineering, and AI Systems. Currently interning at Zetheta Algorithms. Open-source contributor to OpenCV. NIT Mizoram."/>
+<meta name="keywords" content="Dilip Sahu, Software Engineer, Backend Engineer, ML Engineer, NIT Mizoram, Distributed Systems, Portfolio"/>
 <meta name="author" content="Dilip Sahu"/>
-<link rel="canonical" href="https://dilipsahu01.github.io/index.html"/>
+<link rel="canonical" href="https://dilipsahu01.github.io/"/>
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://dilipsahu01.github.io/index.html" />
+<meta property="og:url" content="https://dilipsahu01.github.io/" />
 <meta property="og:title" content="Dilip Sahu — Software Engineer" />
-<meta property="og:description" content="Software Engineer | Backend Engineering | AI Systems | Distributed Systems. 2nd-year B.Tech CSE student at NIT Mizoram." />
+<meta property="og:description" content="I build production systems from scratch — distributed backends, on-device ML pipelines, and IoT telemetry platforms." />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://dilipsahu01.github.io/index.html" />
+<meta property="twitter:url" content="https://dilipsahu01.github.io/" />
 <meta property="twitter:title" content="Dilip Sahu — Software Engineer" />
-<meta property="twitter:description" content="Software Engineer | Backend Engineering | AI Systems | Distributed Systems. 2nd-year B.Tech CSE student at NIT Mizoram." />
+<meta property="twitter:description" content="I build production systems from scratch — distributed backends, on-device ML pipelines, and IoT telemetry platforms." />
 
 <title>Dilip Sahu — Software Engineer</title>
 <link rel="stylesheet" href="style.css"/>
-<style>
-  /* ── HERO ── */
-  .hero {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 6rem 2.5rem 0;
-    min-height: calc(100vh - var(--nav-h));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .hero-role {
-    font-family: var(--ff-sans);
-    font-size: .67rem;
-    font-weight: 700;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1.6rem;
-    opacity: 0; animation: fup .55s .1s forwards;
-  }
-  .hero-role span {
-    display: inline-block;
-    width: 22px; height: 1px;
-    background: var(--rule-dark);
-    vertical-align: middle;
-    margin-right: .6rem;
-  }
-  h1.hero-name {
-    font-family: var(--ff-serif);
-    font-size: clamp(4rem, 10vw, 8.5rem);
-    font-weight: 600;
-    line-height: .95;
-    color: var(--ink);
-    letter-spacing: -.03em;
-    margin-bottom: 2.4rem;
-    opacity: 0; animation: fup .6s .22s forwards;
-  }
-  h1.hero-name em { font-style: italic; color: var(--accent-mid); }
 
-  .hero-desc {
-    font-size: 1.02rem;
-    line-height: 1.82;
-    color: var(--body-c);
-    max-width: 520px;
-    margin-bottom: 2.6rem;
-    opacity: 0; animation: fup .6s .36s forwards;
-  }
-  .hero-desc strong { color: var(--ink); font-weight: 600; }
-
-  .hero-actions {
-    display: flex; gap: .75rem; flex-wrap: wrap;
-    opacity: 0; animation: fup .6s .5s forwards;
-  }
-
-  /* ── STAT ROW ── */
-  .stat-grid { opacity: 0; animation: fup .6s .65s forwards; }
-
-  /* ── QUICK NAV ── */
-  .quick-nav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--rule);
-    border-left: 1px solid var(--rule);
-    background: var(--surface);
-    box-shadow: var(--shadow-sm);
-  }
-  .qn-item {
-    border-right: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
-    padding: 2rem 2rem 1.8rem;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: background .18s;
-  }
-  .qn-item:hover { background: var(--accent-lt); }
-  .qn-num {
-    font-family: var(--ff-serif);
-    font-size: .85rem;
-    color: var(--muted);
-    display: block;
-    margin-bottom: .8rem;
-  }
-  .qn-title {
-    font-family: var(--ff-sans);
-    font-size: .88rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: .4rem;
-  }
-  .qn-desc { font-size: .78rem; color: var(--muted); line-height: 1.6; margin-bottom: .9rem; }
-  .qn-arrow {
-    font-family: var(--ff-sans);
-    font-size: .67rem;
-    font-weight: 600;
-    color: var(--accent-mid);
-    letter-spacing: .04em;
-  }
-
-  @keyframes fup {
-    from { opacity:0; transform:translateY(14px); }
-    to   { opacity:1; transform:translateY(0); }
-  }
-
-  @media (max-width: 720px) {
-    .hero { padding: 4rem 1.4rem 0; }
-    .quick-nav { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .quick-nav { grid-template-columns: 1fr; }
-  }
-</style>
-<!-- Structured Data for SEO -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -148,7 +36,7 @@
   "jobTitle": "Software Engineer | Backend Engineering | AI Systems | Distributed Systems",
   "worksFor": {
     "@type": "Organization",
-    "name": "NIT Mizoram"
+    "name": "Zetheta Algorithms"
   },
   "alumniOf": {
     "@type": "CollegeOrUniversity",
@@ -156,32 +44,16 @@
   },
   "sameAs": [
     "https://github.com/Dilipsahu01",
-    "https://linkedin.com/in/dilip-sahu-7b8789324"
+    "https://linkedin.com/in/dilip-sahu-7b8789324",
+    "https://leetcode.com/u/dilip_sahu01/"
   ],
   "knowsAbout": [
-    "IoT Systems",
-    "Scalable Backends",
-    "Applied Machine Learning",
-    "Post-Quantum Cryptography",
-    "Binary Neural Networks",
-    "C++", "Python", "Java", "Edge AI",
-    "Artificial Intelligence",
-    "Firmware Security"
+    "Distributed Systems", "Scalable Backends", "Applied Machine Learning",
+    "Edge AI", "Apache Kafka", "CockroachDB", "ONNX Runtime",
+    "C++", "Python", "Java", "Go", "Kotlin"
   ],
   "email": "dilipsahu01022006@gmail.com",
-  "description": "2nd-year B.Tech CSE student at NIT Mizoram specializing in IoT Systems, Scalable Backends, and Applied ML."
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://dilipsahu01.github.io/",
-  "name": "Dilip Sahu Portfolio",
-  "author": {
-    "@type": "Person",
-    "name": "Dilip Sahu"
-  }
+  "description": "Software Engineer specializing in distributed systems, backend engineering, and AI systems. Currently at Zetheta Algorithms."
 }
 </script>
 </head>
@@ -190,29 +62,40 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Dilip <span>Sahu</span></a>
     <ul class="nav-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="projects.html">Projects</a></li>
-  <li><a href="competitions.html">Competitions</a></li>
-  <li><a href="certifications.html">Certifications</a></li>
-  <li><a href="clubs.html">Clubs</a></li>
-  <li><a href="research.html">Research</a></li>
-  <li><a href="contact.html">Contact</a></li>
-</ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="competitions.html">Credentials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </nav>
 
+<!-- ═══════════════════════════════════════════════════════
+     HERO SECTION
+     ═══════════════════════════════════════════════════════ -->
 <div class="hero">
-  <p class="hero-role"><span></span>Software Engineer | Backend Engineering | AI Systems | Distributed Systems</p>
-  <h1 class="hero-name">Dilip<br><em>Sahu</em></h1>
+  <div class="hero-top">
+    <img src="photos/dilip.jpeg" alt="Dilip Sahu" class="hero-photo" style="opacity:0; animation: fup .5s .05s forwards;">
+    <div class="hero-text">
+      <p class="hero-role"><span></span>NIT Mizoram · B.Tech CSE · 2024–2028</p>
+      <h1 class="hero-name">Dilip<br><em>Sahu</em></h1>
+    </div>
+  </div>
+
+  <p class="hero-subtitle">Software Engineer — Backend · ML · Distributed Systems</p>
+
   <p class="hero-desc">
-    2nd-year B.Tech CSE student at NIT Mizoram and Software Engineer Intern at Zetheta Algorithms. Specializing in <strong>Distributed Systems</strong>, <strong>Scalable Backends</strong>, and <strong>AI Systems</strong>. Multi-time hackathon winner and Vice-President of the Coding & AI Club.
+    I build production systems from scratch — <strong>distributed transaction architectures</strong>,
+    <strong>on-device ML inference pipelines</strong>, and <strong>IoT telemetry platforms</strong>.
+    Currently at Zetheta Algorithms designing high-throughput fintech backends.
+    Shipped a C++ precision fix upstream to <strong>OpenCV</strong>.
   </p>
+
   <div class="hero-actions">
-    <a href="projects.html"  class="btn btn-fill">View Projects</a>
-    <a href="photos/DILIP SAHU.pdf" target="_blank" class="btn btn-fill" style="background:var(--ink);color:var(--bg);border-color:var(--ink);">Resume</a>
-    <a href="about.html"     class="btn btn-ghost">About Me</a>
-    <a href="contact.html"   class="btn btn-ghost">Contact</a>
+    <a href="projects.html" class="btn btn-fill">View Projects</a>
+    <a href="photos/DILIP SAHU.pdf" target="_blank" class="btn btn-dark">Resume</a>
+    <a href="https://github.com/Dilipsahu01" target="_blank" class="btn btn-ghost">GitHub</a>
+    <a href="https://linkedin.com/in/dilip-sahu-7b8789324" target="_blank" class="btn btn-ghost">LinkedIn</a>
   </div>
 
   <div class="stat-grid">
@@ -225,50 +108,379 @@
       <span class="stat-lbl">DSA Problems Solved</span>
     </div>
     <div class="stat-item">
-      <span class="stat-val">107</span>
-      <span class="stat-lbl">Day LeetCode Streak</span>
-    </div>
-    <div class="stat-item">
       <span class="stat-val">1</span>
-      <span class="stat-lbl">OpenCV Contribution</span>
+      <span class="stat-lbl">OpenCV PR Merged</span>
     </div>
     <div class="stat-item">
       <span class="stat-val">🥇</span>
       <span class="stat-lbl">Hackathon Winner</span>
     </div>
+    <div class="stat-item">
+      <span class="stat-val">Top 50</span>
+      <span class="stat-lbl">National Finalist</span>
+    </div>
   </div>
 </div>
 
-<div class="quick-nav" style="margin-top:5rem;">
+<div class="page" style="padding-top: 0;">
+
+<!-- ═══════════════════════════════════════════════════════
+     DYNAMIC PROOF-OF-COMPETENCE
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal" style="margin-top: 3rem; border-top: none; padding-top: 3rem;">
+  <p class="eyebrow">Proof of Competence</p>
+  <h2 class="section-title">Live <em>Metrics</em></h2>
+  <div class="rule-line"></div>
+
+  <div class="proof-grid">
+    <div class="proof-card reveal">
+      <div class="proof-card-head">GitHub Activity</div>
+      <div class="proof-card-body">
+        <img src="https://ghchart.rshah.org/1a3a2a/Dilipsahu01" alt="GitHub Contribution Chart" loading="lazy" style="margin-bottom:.8rem;">
+        <img src="https://github-readme-stats.vercel.app/api?username=Dilipsahu01&show_icons=true&hide_border=true&bg_color=ffffff&title_color=1a3a2a&icon_color=2d6a4f&text_color=4a4a52&hide=contribs&rank_icon=github" alt="GitHub Stats" loading="lazy">
+      </div>
+    </div>
+    <div class="proof-card reveal d1">
+      <div class="proof-card-head">LeetCode Stats</div>
+      <div class="proof-card-body">
+        <img src="https://leetcard.jacoblin.cool/dilip_sahu01?theme=light&font=Manrope&ext=heatmap" alt="LeetCode Stats" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     EXPERIENCE
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal">
+  <p class="eyebrow">Experience</p>
+  <h2 class="section-title">Where I've <em>Worked</em></h2>
+  <div class="rule-line"></div>
+
+  <div class="exp-timeline">
+    <div class="exp-item reveal">
+      <div class="exp-company">Zetheta Algorithms Private Limited</div>
+      <div class="exp-role">Software Engineer Intern</div>
+      <div class="exp-meta">Jul 2026 – Present · Remote</div>
+      <ul class="exp-points">
+        <li>Designed a distributed transaction architecture for high-throughput fintech workloads, defining transaction flows and scalability strategies.</li>
+        <li>Documented an event-driven microservices design using Apache Kafka, incorporating Saga orchestration and the Outbox Pattern.</li>
+        <li>Performed FMEA across 25+ production failure scenarios — proposed resilience strategies using Circuit Breakers, Bulkheads, and graceful degradation.</li>
+        <li>Evaluated distributed database scaling via hash-based sharding strategy for CockroachDB and Optimistic Concurrency Control.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag tag-accent">FastAPI</span>
+        <span class="tag tag-accent">Apache Kafka</span>
+        <span class="tag tag-accent">CockroachDB</span>
+        <span class="tag tag-done">PostgreSQL</span>
+        <span class="tag">Saga Pattern</span>
+        <span class="tag">Outbox Pattern</span>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-company">Freelance Software Engineer</div>
+      <div class="exp-role">Outlier · Mindrift · Crossing Hurdles</div>
+      <div class="exp-meta">2025 – Present · Remote</div>
+      <ul class="exp-points">
+        <li>Production-level code review, evaluation, and AI training data curation across multiple platforms.</li>
+        <li>Technical writing and engineering problem-solving for client-facing deliverables.</li>
+        <li>Cross-platform quality assurance for software and AI-generated code outputs.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag tag-accent">Python</span>
+        <span class="tag tag-accent">Code Review</span>
+        <span class="tag">Technical Writing</span>
+        <span class="tag">AI Training</span>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-company">Open Source · OpenCV (C++)</div>
+      <div class="exp-role">Upstream Contributor</div>
+      <div class="exp-meta">Sep 2025 · PR Merged</div>
+      <ul class="exp-points">
+        <li>Diagnosed a floating-point precision anomaly in OpenCV's Windows build caused by MinGW FPU extended-precision behavior.</li>
+        <li>Traced the root cause through the production C++ codebase, applied a targeted patch, and submitted a Pull Request upstream.</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag tag-accent">C++</span>
+        <span class="tag tag-accent">OpenCV</span>
+        <span class="tag">Debugging</span>
+        <span class="tag">Open Source</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     TOP PROJECTS PREVIEW
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal">
+  <p class="eyebrow">Engineering</p>
+  <h2 class="section-title">Featured <em>Projects</em></h2>
+  <div class="rule-line"></div>
+  <p class="lead" style="margin-bottom: 2.5rem;">Systems I designed and built from scratch — framed as engineering challenges, not feature lists. <a href="projects.html" style="color:var(--accent-mid);">View all →</a></p>
+
+  <!-- CyberGuard AI -->
+  <div class="challenge-card reveal">
+    <div class="challenge-header">
+      <div style="display:flex; align-items:flex-start; gap:1rem;">
+        <span class="challenge-num">01</span>
+        <div>
+          <div class="challenge-title">CyberGuard AI — Real-Time Edge AI Scam Detection</div>
+          <div class="challenge-meta">National Finalist · ₹1,00,000 Seed Funding · <a href="https://github.com/Dilipsahu01/CyberGuard_AI_Application" target="_blank" style="color:var(--accent-mid); text-decoration:none;">GitHub →</a></div>
+        </div>
+      </div>
+      <span class="badge badge-win">National Finalist</span>
+    </div>
+    <div class="challenge-body">
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--problem">Challenge</span>
+        <p class="challenge-text">Build a real-time scam detection system that runs entirely on-device with no cloud dependency, preserving user privacy on Android smartphones.</p>
+      </div>
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--approach">Approach</span>
+        <p class="challenge-text">Offline inference pipeline integrating Silero VAD and Sherpa-ONNX Fast Conformer. Kotlin Coroutines + JNI + ONNX Runtime for audio processing. Lightweight Go telemetry backend for risk scores.</p>
+      </div>
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--outcome">Outcome</span>
+        <p class="challenge-text"><strong>17ms inference latency</strong>, 48K audio samples every 3 seconds, 145 MB memory budget. National Finalist (Top 50) in DoT 5G Innovation Hackathon.</p>
+      </div>
+      <div class="challenge-tags">
+        <span class="tag tag-accent">Kotlin</span>
+        <span class="tag tag-accent">Go</span>
+        <span class="tag tag-accent">ONNX Runtime</span>
+        <span class="tag">Android</span>
+        <span class="tag">JNI</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Intelligence -->
+  <div class="challenge-card reveal">
+    <div class="challenge-header">
+      <div style="display:flex; align-items:flex-start; gap:1rem;">
+        <span class="challenge-num">02</span>
+        <div>
+          <div class="challenge-title">Document Intelligence Platform</div>
+          <div class="challenge-meta">Full-Stack RAG · Privacy-First · <a href="https://github.com/Dilipsahu01/document-intelligence-plateform" target="_blank" style="color:var(--accent-mid); text-decoration:none;">GitHub →</a></div>
+        </div>
+      </div>
+      <span class="badge badge-done">Completed</span>
+    </div>
+    <div class="challenge-body">
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--problem">Challenge</span>
+        <p class="challenge-text">Turn unstructured book data into searchable AI-powered knowledge without relying on any cloud AI APIs.</p>
+      </div>
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--approach">Approach</span>
+        <p class="challenge-text">Selenium scraper → Django REST → ChromaDB vector store + MySQL metadata → Local LLM via LM Studio → Next.js frontend. ChromaDB chosen for zero-cloud-dependency semantic search.</p>
+      </div>
+      <div class="challenge-section">
+        <span class="challenge-label challenge-label--outcome">Outcome</span>
+        <p class="challenge-text">Full RAG ecosystem with semantic search, automated summaries, and genre classification — <strong>all running locally</strong> with zero cloud AI calls.</p>
+      </div>
+      <div class="challenge-tags">
+        <span class="tag tag-accent">Next.js</span>
+        <span class="tag tag-accent">Django REST</span>
+        <span class="tag tag-accent">ChromaDB</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">RAG</span>
+        <span class="tag">LM Studio</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:1rem;">
+    <a href="projects.html" class="btn btn-ghost">View all 5 engineering challenges →</a>
+  </p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     WINS & LEADERSHIP
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal">
+  <p class="eyebrow">Recognition</p>
+  <h2 class="section-title">Wins & <em>Leadership</em></h2>
+  <div class="rule-line"></div>
+
+  <div class="wins-grid">
+    <div class="wins-card reveal">
+      <div class="wins-card-head">Hackathons & Competitions</div>
+      <div class="wins-card-body">
+        <div class="win-row">
+          <span class="win-icon">⭐</span>
+          <div class="win-content">
+            <div class="win-title">National Finalist — 5G Innovation Hackathon</div>
+            <div class="win-sub">Dept of Telecommunications, Govt of India · Top 50 · ₹1,00,000 Seed Funding</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🥇</span>
+          <div class="win-content">
+            <div class="win-title">Winner — Arthkriti AI Finance Hackathon</div>
+            <div class="win-sub">Project TourAI · NIT Mizoram · 1st Place</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🥇</span>
+          <div class="win-content">
+            <div class="win-title">1st — DSA Problem Solving Challenge</div>
+            <div class="win-sub">Coding & AI Club, NIT Mizoram · 2025</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🥉</span>
+          <div class="win-content">
+            <div class="win-title">3rd — Ideathon / Sovereign Summit</div>
+            <div class="win-sub">NIT Mizoram · Pitched "The Abyssal Grid" roadmap</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">📊</span>
+          <div class="win-content">
+            <div class="win-title">Kaggle Deep Past Challenge</div>
+            <div class="win-sub">Top 48% · Akkadian NLP Translation · 1288/2700+ teams</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wins-card reveal d1">
+      <div class="wins-card-head">Leadership & Scholarship</div>
+      <div class="wins-card-body">
+        <div class="win-row">
+          <span class="win-icon">👔</span>
+          <div class="win-content">
+            <div class="win-title">Vice-President — Coding & AI Club</div>
+            <div class="win-sub">NIT Mizoram · 500+ event registrations · Mentored 15+ students · Organized Trishul & Samyuga contests. <a href="clubs.html" style="color:var(--accent-mid); text-decoration:none; font-weight:600;">Details →</a></div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🎓</span>
+          <div class="win-content">
+            <div class="win-title">Institute Merit Scholarship</div>
+            <div class="win-sub">Awarded to top 5% of students in the department</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🔧</span>
+          <div class="win-content">
+            <div class="win-title">OpenCV Open Source Contributor</div>
+            <div class="win-sub">C++ floating-point precision fix merged upstream · Sep 2025</div>
+          </div>
+        </div>
+        <div class="win-row">
+          <span class="win-icon">🏅</span>
+          <div class="win-content">
+            <div class="win-title">AI Impact Pledge</div>
+            <div class="win-sub">Commitment to responsible AI development</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:1.5rem;">
+    <a href="competitions.html" style="color:var(--accent-mid); text-decoration:none; font-size:.85rem; font-weight:600;">View all credentials, certifications & competition details →</a>
+  </p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     TECHNICAL STACK
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal">
+  <p class="eyebrow">Skills</p>
+  <h2 class="section-title">Technical <em>Stack</em></h2>
+  <div class="rule-line"></div>
+
+  <table class="stack-table">
+    <tr>
+      <td>Languages</td>
+      <td>C/C++ · Java · Python · Kotlin · Go · JavaScript · SQL · Bash</td>
+    </tr>
+    <tr>
+      <td>Backend</td>
+      <td>Flask · FastAPI · Django · REST APIs · Apache Kafka · Event-Driven Systems</td>
+    </tr>
+    <tr>
+      <td>Databases</td>
+      <td>PostgreSQL · MySQL · CockroachDB · Redis · ChromaDB</td>
+    </tr>
+    <tr>
+      <td>AI / ML</td>
+      <td>ONNX Runtime · Sentence Transformers · BM25 · Pandas · Whisper · Meta Prophet</td>
+    </tr>
+    <tr>
+      <td>Systems</td>
+      <td>ESP32 · JNI · Verilog · Docker · Linux · Git · PyTest</td>
+    </tr>
+    <tr>
+      <td>Frontend</td>
+      <td>React 18 · Next.js · Vite · Tailwind CSS · HTML5/CSS3 · JavaScript</td>
+    </tr>
+    <tr>
+      <td>Security</td>
+      <td>AES/DES/RSA · SHA-256 · Digital Signatures · PQC · Firmware Security</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     RESEARCH CALLOUT
+     ═══════════════════════════════════════════════════════ -->
+<div class="landing-section reveal">
+  <p class="eyebrow">Research Focus</p>
+  <h2 class="section-title">Edge AI & <em>Quantization</em></h2>
+  <div class="rule-line"></div>
+  <p class="lead" style="margin-bottom:1.2rem;">
+    My primary research interest is <strong>Edge AI and Model Quantization</strong>. I independently connected bit-width representation from Computer Architecture to weight compression in neural networks — leading me to study Binary Neural Networks, 1-bit LLMs (BitNet b1.58), and on-device inference pipelines before formally studying ML.
+  </p>
+  <p style="font-size:.88rem; color:var(--body-c); line-height:1.75; margin-bottom:1rem;">
+    Active areas: Post-Quantum Cryptography, Binary Neural Networks, 1-bit LLMs, ONNX Runtime on-device deployment.
+  </p>
+  <a href="research.html" style="color:var(--accent-mid); text-decoration:none; font-size:.85rem; font-weight:600;">Explore research interests & upcoming ideas →</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     BOTTOM NAV
+     ═══════════════════════════════════════════════════════ -->
+<div class="quick-nav reveal" style="margin-top:5rem;">
   <a href="projects.html" class="qn-item">
     <span class="qn-num">01</span>
     <div class="qn-title">Projects</div>
-    <p class="qn-desc">File compressor, IoT bus tracker, binary neural network, puzzle solver, and more.</p>
+    <p class="qn-desc">5 engineering challenges solved — from on-device ML to distributed backends.</p>
     <span class="qn-arrow">View all &rarr;</span>
   </a>
-  <a href="about.html" class="qn-item">
+  <a href="competitions.html" class="qn-item">
     <span class="qn-num">02</span>
-    <div class="qn-title">Skills &amp; Stack</div>
-    <p class="qn-desc">FastAPI, Next.js, C++, ESP32, Kafka, machine learning, and scalable backends.</p>
-    <span class="qn-arrow">See full stack &rarr;</span>
-  </a>
-  <a href="certifications.html" class="qn-item">
-    <span class="qn-num">03</span>
-    <div class="qn-title">Certifications</div>
-    <p class="qn-desc">NPTEL Cybersecurity, Scaler, Drone Workshop, and competition wins.</p>
+    <div class="qn-title">Credentials</div>
+    <p class="qn-desc">Hackathon wins, certifications, BIS quizzes, and competition history.</p>
     <span class="qn-arrow">View credentials &rarr;</span>
   </a>
-  <a href="research.html" class="qn-item">
+  <a href="clubs.html" class="qn-item">
+    <span class="qn-num">03</span>
+    <div class="qn-title">Clubs & Leadership</div>
+    <p class="qn-desc">VP of Coding & AI Club, TechnoX coordinator, Think India, and more.</p>
+    <span class="qn-arrow">View clubs &rarr;</span>
+  </a>
+  <a href="contact.html" class="qn-item">
     <span class="qn-num">04</span>
-    <div class="qn-title">Research &amp; Ideas</div>
-    <p class="qn-desc">Binary NNs, BitNet, Edge AI, and upcoming project concepts.</p>
-    <span class="qn-arrow">Explore &rarr;</span>
+    <div class="qn-title">Contact</div>
+    <p class="qn-desc">Open to internships, research collaborations, and open-source work.</p>
+    <span class="qn-arrow">Get in touch &rarr;</span>
   </a>
 </div>
+
+</div><!-- /.page -->
 
 <footer>
   <span>Dilip Sahu &mdash; NIT Mizoram, CSE</span>
   <a href="mailto:dilipsahu01022006@gmail.com">dilipsahu01022006@gmail.com</a>
 </footer>
+
+<script type="module" src="animations.js"></script>
 </body>
 </html>

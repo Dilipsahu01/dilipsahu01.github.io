@@ -1,0 +1,408 @@
+================================================================================
+DILIP SAHU
+Software Engineer | Backend Engineering | AI Systems | Distributed Systems
+================================================================================
+
+CONTACT
+--------------------------------------------------------------------------------
+Phone: +91 8233958847
+Email: bt24cs028@nitmz.ac.in
+LinkedIn: linkedin.com/in/dilip-sahu-7b8789324
+GitHub: github.com/Dilipsahu01
+Portfolio: dilipsahu01.github.io
+LeetCode: leetcode.com/u/dilip_sahu01
+
+================================================================================
+EDUCATION
+================================================================================
+National Institute of Technology Mizoram — Aizawl, Mizoram
+Bachelor of Technology, Computer Science & Engineering
+Expected Graduation: May 2028
+CGPA: 7.98 / 10.00
+
+Scholarship
+- Institute Merit Scholarship — awarded to the top 5% of students in the
+  department; covers 100% tuition, hostel & mess support
+
+================================================================================
+PROFESSIONAL EXPERIENCE
+================================================================================
+Software Engineer Intern | Zetheta Algorithms Private Limited | Remote
+Jul 2026 – Present
+
+- Architecting a production-grade financial reconciliation engine processing
+  100,000+ multi-bank transactions using hash matching, RapidFuzz similarity,
+  and subset-sum reconciliation.
+- Designed canonical ingestion pipelines supporting MT940 SWIFT, ISO 20022 XML,
+  and heterogeneous banking CSV formats using FastAPI and Pydantic.
+- Built tamper-evident audit infrastructure with PostgreSQL, SQLAlchemy, and
+  SHA-256 integrity verification.
+- Engineered scalable reconciliation workflows emphasizing determinism,
+  traceability, and auditability.
+- Designed a distributed transaction architecture for high-throughput fintech
+  workloads, defining transaction flows and scalability strategies.
+- Documented an event-driven microservices design using Apache Kafka,
+  incorporating Saga orchestration and the Outbox Pattern for reliable
+  inter-service communication and transactional consistency.
+- Performed Failure Mode and Effects Analysis (FMEA) across 25+ production
+  failure scenarios; proposed resilience strategies using Circuit Breakers,
+  Bulkheads, and graceful degradation techniques.
+- Evaluated distributed database scaling approaches by defining a hash-based
+  sharding strategy for CockroachDB and analyzing Optimistic Concurrency
+  Control to mitigate deadlocks under concurrent workloads.
+
+Vice-President | Coding & AI Club, NIT Mizoram
+(Previously: Team Head – Website & Social Media, Feb 2025 – Present)
+
+- Led the development and maintenance of the club's digital platforms,
+  supporting registrations for 500+ participants across major technical events.
+- Built a serverless event registration workflow using Python, Google Cloud,
+  and Google Sheets APIs, automating participant management and reducing
+  manual administrative effort by approximately 30 hours per event.
+- Mentored 15+ junior students in competitive programming, backend
+  development, and AI projects while coordinating technical activities and
+  leading the club's web presence.
+
+================================================================================
+SELECTED PROJECTS
+================================================================================
+CyberGuard-AI — Real-Time Edge AI Scam Detection
+Kotlin | Go | Android | ONNX Runtime | JNI | Whisper
+GitHub: github.com/Dilipsahu01/CyberGuard_AI_Application
+
+- National Finalist (Top 50), DoT 5G Innovation Hackathon, Department of
+  Telecommunications, Government of India.
+- Awarded ₹1,00,000 seed funding.
+- Engineered an offline Android inference pipeline integrating Silero VAD and
+  Sherpa-ONNX Fast Conformer for real-time speech transcription without
+  transmitting user audio to the cloud, preserving user privacy.
+- Built the end-to-end detection pipeline using Kotlin Coroutines, JNI, and
+  ONNX Runtime, processing 48K audio samples every three seconds at ~17 ms
+  inference latency within a 145 MB memory budget.
+- Developed a lightweight Go telemetry backend for receiving risk scores and
+  diagnostic metadata from Android clients, supporting future 5G edge
+  deployment.
+
+TourAI — AI Travel & Financial Planning Platform
+FastAPI | React | MySQL | Docker | Claude API | Prophet
+GitHub: github.com/Dilipsahu01/tourai_project
+
+- Winner, Arthkriti AI Finance Hackathon 2026.
+- Built a 15-year economic dataset from 2,000+ government records.
+- Trained forecasting models achieving below 4% MAPE.
+- Architected an asynchronous FastAPI backend integrating ML inference and
+  LLM orchestration.
+
+AI Candidate Ranking Pipeline
+Python | Pandas | Sentence Transformers | BM25 | Gradio
+
+- Built a CPU-optimized candidate ranking engine processing 100K+ JSON
+  resumes in under five minutes, with no external APIs or GPU acceleration.
+- Designed a three-stage ranking pipeline combining vectorized Pandas
+  filtering, BM25 lexical retrieval, and semantic similarity via the
+  all-MiniLM-L6-v2 Sentence Transformer.
+
+Live Campus Transit & Telemetry Platform (IoT Bus Tracker)
+ESP32 | C++ | Flask | PostgreSQL | SIM800L
+GitHub: github.com/Dilipsahu01/nitmz-bus-tracker
+
+- Led the implementation of an end-to-end vehicle tracking platform using
+  ESP32 firmware, HTTPS telemetry, and a Flask backend for real-time campus
+  bus location updates.
+- Developed embedded GPS telemetry firmware with compact binary payloads;
+  backend services process 36,000+ telemetry packets/day per node.
+- Implemented secure API-key authentication, one-second GPS updates, resilient
+  GSM/Wi-Fi failover, and buffered telemetry for reliable tracking under
+  unstable network conditions.
+
+Secure Senior Care Management Platform
+Flask | PostgreSQL | JavaScript | JWT
+Jan 2026 – May 2026
+
+- Developed a secure full-stack care management platform with JWT
+  authentication, role-based access control, REST APIs, and a normalized
+  PostgreSQL database, deployed on Vercel with Supabase.
+
+================================================================================
+TECHNICAL SKILLS
+================================================================================
+Languages: Python, C/C++, Java, Go, Kotlin, JavaScript, SQL, Bash
+Backend: FastAPI, Flask, Django, REST APIs, SQLAlchemy, JWT, Apache Kafka,
+         Event-Driven Systems
+Databases: PostgreSQL, MySQL, CockroachDB, Redis
+AI/ML: ONNX Runtime, Prophet, Whisper, Sentence Transformers, BM25,
+       Anthropic SDK, Pandas
+Tools: Git, Docker, Linux, Bash, PyTest
+Systems: ESP32, JNI, Verilog
+
+================================================================================
+LEADERSHIP
+================================================================================
+- Vice-President, Coding & AI Club, NIT Mizoram
+- Ex-Team Head, Website & Social Media, Coding & AI Club, NIT Mizoram
+- Mentored 15+ students in backend engineering and competitive programming
+- Led digital infrastructure and technical event operations for the club
+
+================================================================================
+ACHIEVEMENTS
+================================================================================
+- National Finalist (Top 50), DoT 5G Innovation Hackathon, Government of India
+- ₹1,00,000 Seed Funding Recipient
+- Winner, Arthkriti AI Finance Hackathon 2026 (TourAI)
+- Institute Merit Scholarship (top 5% of department)
+- Selected for Amazon ML Summer School
+- 500+ DSA problems solved across LeetCode and GeeksforGeeks
+
+================================================================================
+END OF FILE
+================================================================================
+
+================================================================================
+ADDITIONAL INFORMATION (Extended Profile)
+================================================================================
+
+LOCATION
+--------------------------------------------------------------------------------
+Current: Aizawl, Mizoram
+Home: Jaipur, Rajasthan
+
+PERSONAL EMAIL
+--------------------------------------------------------------------------------
+dilipsahu01022006@gmail.com
+
+PROFESSIONAL SUMMARY
+--------------------------------------------------------------------------------
+2nd-year B.Tech Computer Science and Engineering student at NIT Mizoram
+specializing in Scalable Distributed Systems, Artificial Intelligence
+Development, Internet of Things Systems, and Backend Engineering. National
+Level Qualifier (Top 200) in the DoT Government of India 5G Innovation
+Hackathon and multi-time contest winner, with a strong foundation in Data
+Structures, Time-Series Analysis, and Large-Scale System Architecture. Expert
+in architecting full-stack applications with 3NF-normalized databases,
+real-time telemetry pipelines, and predictive Machine Learning models.
+
+ADDITIONAL EDUCATION DETAIL
+--------------------------------------------------------------------------------
+Recent SGPA: 8.75
+Relevant Coursework: Data Structures & Algorithms, Object-Oriented
+Programming, System Programming, Computer Organization & Architecture,
+Operating Systems, Database Management Systems, Linear Algebra, Probability
+& Statistics
+
+ADDITIONAL TECHNICAL SKILLS
+--------------------------------------------------------------------------------
+Languages: TypeScript (in addition to previously listed languages)
+CS Foundations & Architecture: Model-View-Controller Architecture,
+  Role-Based Access Control, Algorithm Complexity Analysis, Custom Neural
+  Networks
+AI/ML & Data Science: Large Language Models (LLMs), Retrieval-Augmented
+  Generation (RAG), Natural Language Processing (NLP), Meta Prophet, Random
+  Forest, Claude AI, Whisper.cpp, SciPy, scikit-learn, Statsmodels, NumPy
+Edge AI & Model Optimization: Model Quantization (1-bit, 4-bit, 8-bit), INT8
+  Quantization, On-Device Inference, Binary Neural Networks (BNNs), Edge AI
+Web Development: Next.js, React 18, Tailwind CSS, HTML5, CSS3, Flask-JWT-
+  Extended, Jinja2
+Databases: ChromaDB, Supabase, H2 Database
+Cybersecurity & Cryptography: Post-Quantum Cryptography (PQC), Lattice-Based
+  Cryptography, AES, DES, RSA, SHA-256, Public Key Infrastructure (PKI),
+  Side-Channel Attack Mitigation, Firmware Security
+Embedded Systems & IoT: GSM/GPRS (SIM800L), NEO-6M GPS, UART Protocols,
+  Wi-Fi Communication Protocols, Telemetry Failover Systems, Circular
+  Buffers, Arduino
+Developer Tools: Leaflet.js, Postman API Platform, PM2 Process Manager,
+  Figma, Canva
+
+ADDITIONAL EXPERIENCE, HACKATHONS & SIMULATIONS
+--------------------------------------------------------------------------------
+5G Innovation Hackathon 2026 | Department of Telecommunications (DoT),
+Government of India (May 2026 – Present)
+- National Level Qualifier (Top 200); cleared Zonal and State evaluation
+  rounds and selected for the National Level Presentation-Based Evaluation.
+- Competed further to reach National Finalist (Top 50) status with the
+  CyberGuard-AI project (see Achievements).
+
+Google Cloud Rapid Agent Hackathon (May 2026) — AI Developer, Remote
+- Developing a "Crisis Response Agent": multi-step AI agents capable of
+  taking real-world actions.
+- Using Google Cloud Platform (GCP) and RAG approaches for dynamic data
+  retrieval and rapid response generation.
+
+JPMorgan Chase & Co. (Forage) (March 2026) — Software Engineering Virtual
+Experience
+- Engineered a real-time data visualizer using Apache Kafka and H2
+  Database, achieving sub-10ms response latency for high-frequency
+  live data ingestion.
+- Completed modules: Project Setup, Kafka Integration, H2 Integration,
+  REST API Integration, REST API Controller Design.
+
+OpenCV (Intel-led) (September 2025) — Technical Contributor (C++), Remote
+- Diagnosed a floating-point precision anomaly in OpenCV's Windows build
+  caused by MinGW FPU extended-precision behavior.
+- Traced the root cause in C++ and submitted a validated Pull Request
+  implementing strict double-precision semantics.
+
+ADDITIONAL PROJECTS
+--------------------------------------------------------------------------------
+File Compressor Pro (Completed) | HTML5, CSS3, Vanilla JS, Web Workers,
+PDF.js, jsPDF, heic2any — built for DigitalHeros
+- High-performance, privacy-first, 100% client-side file compression web app
+  running entirely in-browser via Web Workers for parallel processing.
+- Hardware-aware concurrency control and async task queue to prevent
+  browser memory spikes/crashes during batch processing.
+- Smart two-pass PDF rendering/downscaling engine (PDF.js + jsPDF) that
+  decouples layout from resolution and handles transparencies cleanly.
+
+CyberGuard-AI — additional detail:
+- Pipeline: live mic audio -> 16-parameter extraction -> Whisper.cpp tiny
+  speech-to-text -> language-aware LoRA adapter -> conversation arc tracker
+  -> Q4 GGUF LLM classifier (SAFE / SUSPICIOUS / SCAM).
+- Generated 1,398 high-quality training samples using a 7B LLM on Kaggle,
+  supplemented with Indian High Court case records and YouTube fake call
+  recordings.
+- Target footprint: ~480 MB, for low-end Android phones and laptops.
+
+TourAI — additional detail:
+- Co-developed with team members Naman Shukla and Anshul Singh.
+- 6-module ML pipeline: Meta Prophet cost forecasting (15-year Mizoram
+  dataset) + Random Forest financial feasibility checks (100 estimators).
+- RAG pipeline over local destination knowledge bases via Claude Sonnet 4.
+- Full container orchestration stack (MySQL, FastAPI, reverse-proxy React
+  frontend) with a gamified milestone savings reward system.
+
+IoT Campus Bus Tracker — additional detail:
+- ESP32 Lead for a 5-member team; solely responsible for all C++ firmware.
+- 240MHz ESP32 with dual-network failover (GSM/Wi-Fi), 60-second timeout
+  mechanism, and a 10-packet circular buffer for continuity during outages.
+- Engineered around the NEO-6M GPS module's delayed LED satellite-fix quirk.
+- ~1-second telemetry cycle, ~2.5m GPS accuracy; JSON payloads include
+  lat/long, speed (km/h), satellite count, HDOP, fix status, network type,
+  and ISO-8601 UTC timestamp, feeding a live Leaflet.js dashboard.
+
+Custom Cryptographic Engine & Firmware Security (Completed) | C, Python,
+AES, DES, RSA
+- Built AES, DES, and RSA from scratch, plus SHA-256 hashing utilities and
+  digital signature verification protocols.
+- Designed firmware architectures resilient to side-channel attacks and
+  fault injection for embedded microcontrollers.
+
+Full-Stack AI Document Intelligence Platform (Completed) | Next.js, Django
+REST Framework, MySQL, ChromaDB, LM Studio
+- RAG ecosystem with an automated Selenium scraper to ingest/normalize
+  unstructured book data.
+- Dual-database architecture (MySQL for relational metadata, ChromaDB for
+  vector embeddings) with local LLMs via LM Studio for zero-cloud AI.
+
+Senior Care Portal — additional detail:
+- 3NF-compliant 15-table relational schema managing room capacities and
+  full resident lifecycles (admit, transfer, discharge, re-admit).
+- Database-level RBAC via JWT tokens with stateless audit logging for
+  medical data integrity.
+
+Hyperliquid × Bitcoin Sentiment Analysis (Completed) | Python, Pandas,
+SciPy, scikit-learn
+- Quantitative analysis of ~211K Hyperliquid perpetual futures trades
+  merged with the Bitcoin Fear & Greed Index to study sentiment regimes.
+- Kruskal-Wallis, Mann-Whitney, Spearman/Pearson correlations, VaR/CVaR
+  tests for a Primetrade.ai data science hiring assignment; produced 17
+  auto-generated dark-theme charts and an auto-rendered Markdown report.
+
+Java Digit Recognizer (Binary Neural Network) (Nov 2025 – Jan 2026) | Java,
+MNIST, Swing, MVC
+- 3-layer fully connected neural network (784 -> 128 Sigmoid -> 10 Softmax)
+  built from scratch in Core Java with manual backpropagation.
+- Binary input encoding / 1-bit quantization to normalize pixels to 0/1,
+  achieving 96% accuracy on MNIST test images.
+
+Water Sort Studio Pro (Oct 2025) | Java, Swing, DFS/BFS Algorithms
+- Desktop puzzle solver using state-space graph search (DFS/BFS), solving
+  16-bottle configurations in under 2 seconds via pruning and memoization.
+
+ADDITIONAL LEADERSHIP & EXTRACURRICULAR
+--------------------------------------------------------------------------------
+- Led the club website (HTML, CSS, JS, MySQL) and conducted weekly DSA and
+  Git/DVCS workshops for 50+ students.
+- Founded the "Zero to Hero" mentorship initiative for junior students.
+- Coordinated with Club President Rishabh Shukla and Faculty Mentor Dr.
+  Tanmay Kumar to execute the SAMYUGA technical event (Trishul, Chakravyuh,
+  Prarambh competitions).
+- TechnoX 2025–26: Discord Server Handler & Coordinator for the university
+  technical festival — communication, participant engagement, moderation,
+  and technical support.
+
+PROFESSIONAL MEMBERSHIPS
+--------------------------------------------------------------------------------
+- Arthkriti (Business & Finance Club) — Active Member (2025–Present)
+- GDG on Campus (Google Developer Groups) — Active Member (2025–Present)
+- Think India — Active Member (2025–Present); policy research and civic
+  engagement
+- JAD Foundation — Active Member (2025–Present); NGO activities and
+  community outreach
+
+RESEARCH INTERESTS
+--------------------------------------------------------------------------------
+- Post-Quantum Cryptography (PQC): lattice-based frameworks resistant to
+  quantum attacks.
+- Model Quantization & Edge AI: Binary Neural Networks (BinaryConnect,
+  XNOR-Net), 1-bit LLMs (BitNet, BitNet b1.58), ultra-low-bit inference,
+  privacy-preserving on-device AI.
+- Distributed Systems & Large-Scale Backend Engineering: scalable service
+  architectures, fault-tolerant infrastructure, telemetry pipelines,
+  event-driven systems.
+- Embedded AI & IoT: efficient ML deployment on edge devices, micro-
+  controllers, and low-resource environments.
+
+ADDITIONAL ACHIEVEMENTS & AWARDS
+--------------------------------------------------------------------------------
+Hackathons & Competitive Events:
+- 1st Place — Coding & AI Club Data Structures & Algorithms Challenge (2025)
+- 1st Place — Coding & AI Club Logo Design Competition
+
+Ideathons, Innovation Challenges & Strategic Pitches:
+- 3rd Position — Mathematics & Computing Society Ideathon
+- 2nd Position — Sovereign Summit; pitched "The Abyssal Grid," a strategic
+  roadmap for a Sovereign Blue Economy using autonomous marine
+  infrastructure, OTEC plants, and next-gen maritime systems
+
+Kaggle & Data Science Competitions:
+- Global Rank 1288 (Top 48% of 2,700+ teams), Deep Past Challenge
+  (Akkadian-to-English NLP Translation Competition) — score 33.3263 vs.
+  competition-leading score of 42.8957
+
+ADDITIONAL COMPETITIVE PROGRAMMING DETAIL
+--------------------------------------------------------------------------------
+- 400+ problems solved across LeetCode and Striver's A2Z Problem Sheets
+- Active 107-day LeetCode streak
+- Active 45-day GeeksforGeeks Problem of the Day streak
+
+CERTIFICATIONS
+--------------------------------------------------------------------------------
+- Fundamentals of Cybersecurity — Zscaler Academy
+- Fundamentals of Cybersecurity — SWAYAM NPTEL
+- Deloitte Technology Job Simulation Program
+- Intellectual Property (IP) Management Workshop — February 2026
+- Scaler Training Program
+- 5-Day Drone Technology Workshop
+
+PARTICIPATION & ACADEMIC ENGAGEMENT
+--------------------------------------------------------------------------------
+- Participated in multiple Bureau of Indian Standards (BIS) National Level
+  Quizzes: United Nations Day Quiz, Independence Day Quiz, IEC Standards
+  Quiz, World Environment Day Quiz
+- Actively involved in university-level hackathons, innovation challenges,
+  technical competitions, open-source initiatives, and AI development
+  activities
+
+GITHUB / LEETCODE STATS BADGES (for README / portfolio site embedding)
+--------------------------------------------------------------------------------
+GitHub Stats:
+<img src="https://github-readme-stats.vercel.app/api?username=Dilipsahu01&show_icons=true&theme=radical" alt="GitHub Stats" />
+
+GitHub Top Languages:
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dilipsahu01&layout=compact&theme=radical" alt="Top Languages" />
+
+LeetCode Stats:
+<img src="https://leetcard.jacoblin.cool/Dilipsahu01?theme=dark&font=Syne&ext=heatmap" alt="LeetCode Stats" />
+
+================================================================================
+END OF FILE
+================================================================================
