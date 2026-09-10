@@ -84,7 +84,7 @@ export default function About() {
           </p>
           
           <motion.div 
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap items-center gap-6 mt-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -98,6 +98,21 @@ export default function About() {
               <span className="text-xs font-mono text-sage uppercase">Education</span>
               <span className="text-sm font-medium">B.Tech CSE @ NIT Mizoram</span>
             </div>
+            
+            <a 
+              href="/Dilip_Sahu_Resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="ml-0 md:ml-4 group relative px-6 py-2.5 border border-sage/40 rounded-full font-mono text-sm text-sage overflow-hidden transition-all duration-300 hover:border-sage hover:text-white"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                VIEW RESUME
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-sage transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out z-0"></div>
+            </a>
           </motion.div>
         </div>
       </div>
