@@ -100,7 +100,7 @@ export default function About() {
             </div>
             
             <a 
-              href="/Dilip_Sahu_Resume.pdf" 
+              href="/DilipSahu.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="ml-0 md:ml-4 group relative px-6 py-2.5 border border-sage/40 rounded-full font-mono text-sm text-sage overflow-hidden transition-all duration-300 hover:border-sage hover:text-white"
